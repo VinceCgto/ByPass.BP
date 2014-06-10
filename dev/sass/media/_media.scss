@@ -1,0 +1,13 @@
+/*///////////////////////////
+
+ 	MEDIA QUERIES & PRINT
+
+///////////////////////////*/
+
+@media print {
+	img { max-width: 100% !important; }
+}
+
+@media all and (max-width: $desktop-width) {
+	.container { width: 100%; }
+}

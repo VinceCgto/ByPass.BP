@@ -1,0 +1,9 @@
+/*/////////////
+
+ 	HELPERS
+
+/////////////*/
+
+::-moz-selection { background: $highlightBGColor; color: $highlightTextColor; text-shadow: none; }
+::selection { background: $highlightBGColor; color: $highlightTextColor; text-shadow: none; }
+

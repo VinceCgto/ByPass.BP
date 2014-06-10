@@ -1,0 +1,43 @@
+/*//////////////////////////////////////////
+
+	ALL ELEMENTS HIGH UP THE FOOD CHAIN
+
+//////////////////////////////////////////*/
+
+* { box-sizing: border-box; }
+
+html {
+	font-size: 100%;
+	overflow-y: scroll;
+
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+  	font-size: 1em;
+  	line-height: 1.5em;
+
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+
+  	-webkit-tap-highlight-color: transparent;
+	-webkit-backface-visibility: hidden;
+}
+
+textarea { resize: vertical; }
+
+object, iframe,
+dl, dt, ol, ul,
+p, blockquote, pre,
+h1, h2, h3, h4, h5, h6,
+address, figure, fieldset, form, table, hr {
+	margin: 0;
+    margin-bottom:24px;
+    margin-bottom:1.5rem;
+}
+
+.container {
+	width: $desktop-width;
+	margin: 0 auto;
+}

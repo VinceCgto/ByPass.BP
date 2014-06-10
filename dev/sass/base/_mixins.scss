@@ -1,0 +1,20 @@
+/*/////////////
+
+ 	MIXINS
+
+/////////////*/
+
+@function em($pxval, $base: 14) {
+	@if not unitless($pxval) {
+		$pxval: strip-units($pxval);
+	}
+	@if not unitless($base) {
+		$base: strip-units($base);
+	}
+	@return ($pxval / $base) * 1em;
+}
+
+@mixin rgba-border($side, $size, $transparency) {
+	border-#{$side}:$size solid #d3d3d3;
+	border-#{$side}:$size solid rgba(0,0,0, $transparency);
+}

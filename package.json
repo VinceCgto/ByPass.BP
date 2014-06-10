@@ -1,0 +1,23 @@
+{
+  "name": "Name",
+  "preferGlobal": "false",
+  "version": "0.1.0",
+  "description": "Description",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-autoprefixer": "~0.1.20130615",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-imagemin": "^0.7.1",
+    "grunt-contrib-sass": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.4"
+  },
+  "directories": {
+    "sass": "dev/sass",
+    "css": "css",
+    "js_dev": "dev/js",
+    "js": "js",
+    "img": "dev/img",
+    "img_min": "img"
+  }
+}
