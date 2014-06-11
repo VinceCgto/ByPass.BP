@@ -2,3 +2,5 @@
 .sass-cache
 *.scssc
 node_modules/
+BP.sublime-project
+BP.sublime-workspace

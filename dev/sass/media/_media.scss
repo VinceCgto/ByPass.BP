@@ -8,6 +8,10 @@
 	img { max-width: 100% !important; }
 }
 
-@media all and (max-width: $desktop-width) {
-	.container { width: 100%; }
+@media all and (max-width: $desktop-outer) {
+	.container-outer { width: 95%; }
+}
+
+@media all and (max-width: $desktop-inner) {
+	.container-inner { width: 90%; }
 }

@@ -15,11 +15,16 @@ html {
 }
 
 body {
-  	font-size: 1em;
+	font-family: Georgia, Times, "Times New Roman", serif;
+  	font-size: 1.1em;
   	line-height: 1.5em;
+  	letter-spacing: 0.5px;
+
+  	background: $bodyBGColor;
+  	color: $bodyTextColor;
 
 	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
+	// -webkit-font-smoothing: antialiased;  --- anti-aliasing if light text on dark BG
 
   	-webkit-tap-highlight-color: transparent;
 	-webkit-backface-visibility: hidden;
@@ -37,7 +42,53 @@ address, figure, fieldset, form, table, hr {
     margin-bottom:1.5rem;
 }
 
-.container {
-	width: $desktop-width;
+blockquote {
+	font-style: italic;
+	margin: 60px auto;
+
+	p { margin-bottom: 0; }
+
+	.quotes:before {
+		content: '“';
+		margin-right: 5px;
+		font-size: 1.5em;
+	}
+
+	.quotes:after {
+		content: '”';
+		margin-left: 5px;
+		font-size: 1.5em;
+	}
+
+	span.cite { display: block; margin: 10px auto; font-style: normal; padding-left: 10px; }
+	span.cite:before { content: '— '; }
+}
+
+blockquote.big {
+	font-size: 1.5em;
+	text-align: center;
+
+	span.cite {
+		width: 50%;
+		font-size: 0.8rem;
+
+	}
+}
+
+blockquote.small {
+	font-size: 0.8em;
+	text-align: left;
+	width: 80%;
+}
+
+ul > li:not(:last-child) { margin-bottom: 1em; }
+
+.container-outer {
+	width: $desktop-outer;
+	margin: 0 auto;
+}
+
+.container-inner {
+	width: $desktop-inner;
 	margin: 0 auto;
 }
