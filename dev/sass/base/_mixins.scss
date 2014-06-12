@@ -4,7 +4,7 @@
 
 /////////////*/
 
-@function em($pxval, $base: 14) {
+@function em($pxval, $base: 16) {
 	@if not unitless($pxval) {
 		$pxval: strip-units($pxval);
 	}
@@ -12,6 +12,16 @@
 		$base: strip-units($base);
 	}
 	@return ($pxval / $base) * 1em;
+}
+
+@function rem($pxval, $base: 16) {
+	@if not unitless($pxval) {
+		$pxval: strip-units($pxval);
+	}
+	@if not unitless($base) {
+		$base: strip-units($base);
+	}
+	@return ($pxval / $base) * 1rem;
 }
 
 @mixin rgba-border($side, $size, $transparency) {

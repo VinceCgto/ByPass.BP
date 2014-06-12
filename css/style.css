@@ -1,224 +1,255 @@
-@charset "CP850";
-
 /*//////////
 
  	BASE
 
 //////////*/
-
 /*////////////////////////////////////////////////////
 
 	FETCH LATEST NORMALIZE
 	Sublime Text 2 > Fetch: File > Normalize.css
 
 ////////////////////////////////////////////////////*/
-
 /*/////////////////////
 
  	VARIABLES, DUH
 
 /////////////////////*/
-
 /*/////////////
 
  	COLORS
 
 /////////////*/
-
+/*    BASE     */
+/*    ACCENT     */
 /*    HIGHLIGHT     */
-
-/*    BODY     */
-
+/*    HYPERLINKS     */
 /*/////////////
 
  	MIXINS
 
 /////////////*/
-
 /*/////////////
 
  	HELPERS
 
-/////////////////////////////////////////////////////
+/////////////*/
+::-moz-selection {
+  background: #b55856;
+  color: white;
+  text-shadow: none; }
+
+::selection {
+  background: #b55856;
+  color: white;
+  text-shadow: none; }
+
+/*//////////////////////////////////////////
 
 	ALL ELEMENTS HIGH UP THE FOOD CHAIN
 
 //////////////////////////////////////////*/
-
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 html {
-  font-size: 100%;
+  font-size: 110%;
   overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
+  -ms-text-size-adjust: 100%; }
 
 body {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 1.1em;
   line-height: 1.5em;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.025em;
   background: white;
   color: #444444;
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
-  -webkit-backface-visibility: hidden;
-}
+  -webkit-backface-visibility: hidden; }
 
 textarea {
-  resize: vertical;
-}
+  resize: vertical; }
 
-object,
-iframe,
-dl,
-dt,
-ol,
-ul,
-p,
-blockquote,
-pre,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-address,
-figure,
-fieldset,
-form,
-table,
-hr {
+object, iframe,
+dl, dt, ol, ul,
+p, blockquote, pre,
+h1, h2, h3, h4, h5, h6,
+address, figure, fieldset, form, table, hr, .md {
+  display: block;
   margin: 0;
   margin-bottom: 24px;
-  margin-bottom: 1.5rem;
-}
+  margin-bottom: 1.5rem; }
 
-blockquote {
-  font-style: italic;
-  margin: 60px auto;
-}
+section {
+  margin-bottom: 32px;
+  margin-bottom: 2rem; }
 
-blockquote p {
-  margin-bottom: 0;
-}
-
-blockquote .quotes:before {
-  content: '“';
-  margin-right: 5px;
-  font-size: 1.5em;
-}
-
-blockquote .quotes:after {
-  content: '”';
-  margin-left: 5px;
-  font-size: 1.5em;
-}
-
-blockquote span.cite {
-  display: block;
-  margin: 10px auto;
-  font-style: normal;
-  padding-left: 10px;
-}
-
-blockquote span.cite:before {
-  content: '— ';
-}
-
-blockquote.big {
-  font-size: 1.5em;
-  text-align: center;
-}
-
-blockquote.big span.cite {
-  width: 50%;
-  font-size: 0.8rem;
-}
-
-blockquote.small {
-  font-size: 0.8em;
-  text-align: left;
-  width: 80%;
-}
-
-ul > li:not(:last-child) {
-  margin-bottom: 1em;
-}
+.md.link-wrap {
+  margin-bottom: 16px;
+  margin-bottom: 1rem; }
+  .md.link-wrap a {
+    display: inline-block; }
 
 .container-outer {
   width: 1100px;
-  margin: 0 auto;
-}
+  margin: 3.125em auto 0; }
 
 .container-inner {
   width: 700px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 /*//////////////////
 
  	TYPOGRAPHY
 
-////////////////////////////////
+//////////////////*/
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5em; }
+
+h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
+
+h2 {
+  font-size: 1em; }
+
+a {
+  text-decoration: none;
+  color: #b55856;
+  padding-bottom: 0.0625em;
+  position: relative; }
+
+a:hover:after {
+  width: 100%; }
+
+a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  width: 0;
+  color: #b55856;
+  border-bottom: 1px solid #b55856;
+  content: '';
+  -webkit-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  transition: width 0.5s; }
+
+.email {
+  font-style: italic; }
+
+blockquote {
+  font-style: italic;
+  line-height: 1.5em;
+  margin: 50px auto;
+  margin: 3.125rem auto; }
+  blockquote p {
+    margin-bottom: 0; }
+  blockquote .quotes:before {
+    content: '\201C';
+    margin-right: 0.3125em;
+    font-size: 1.5em; }
+  blockquote .quotes:after {
+    content: '\201D';
+    margin-left: 0.3125em;
+    font-size: 1.5em; }
+  blockquote span.cite {
+    display: block;
+    margin: 0.625em auto;
+    padding-left: 0.625em;
+    font-style: normal;
+    line-height: 24px;
+    line-height: 1.5rem; }
+  blockquote span.cite:before {
+    content: '\2014';
+    margin-right: 0.3125em; }
+
+blockquote.big {
+  font-size: 1.5em;
+  text-align: center; }
+  blockquote.big span.cite {
+    width: 50%;
+    font-size: 0.8rem; }
+
+blockquote.small {
+  font-size: 0.8em;
+  text-align: left;
+  width: 80%; }
+
+ul > li:not(:last-child), ol > li:not(:last-child) {
+  margin-bottom: 1em; }
+
+ul {
+  padding-left: 1.25em; }
+
+ol {
+  padding-left: 0;
+  counter-reset: i 0;
+  list-style-type: none; }
+
+ol li:before {
+  content: counter(i) ". ";
+  counter-increment: i;
+  padding-right: 0.5em;
+  color: #b55856; }
+
+/*////////////////
 
  	COMPONENTS
 
 ////////////////*/
-
 /*/////////////
 
  	BUTTONS
 
 /////////////*/
-
 /*////////////
 
  	LISTS
 
 ////////////*/
-
 /*////////////
 
  	LAYOUT
 
 ////////////*/
-
 /*/////////////
 
  	HEADER
 
 /////////////*/
-
 /*/////////////////
 
  	NAVIGATION
 
 /////////////////*/
-
 /*/////////////
 
  	FOOTER
 
 /////////////*/
-
 /*////////////
 
  	MEDIA
 
 ////////////*/
-
 /*///////////////////////////
 
  	MEDIA QUERIES & PRINT
 
-//////////////////////////////////////
+///////////////////////////*/
+@media print {
+  img {
+    max-width: 100% !important; } }
+@media all and (max-width: 1100px) {
+  .container-outer {
+    width: 95%; } }
+@media all and (max-width: 700px) {
+  .container-inner {
+    width: 90%; } }
+/*/////////////
 
  	RETINA
 

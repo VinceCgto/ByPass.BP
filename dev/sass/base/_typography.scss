@@ -4,4 +4,88 @@
 
 //////////////////*/
 
-a { text-decoration: none; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.5em; }
+h2, h3, h4, h5, h6 {
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+h2 { font-size: 1em; }
+
+a { text-decoration: none; color: $color__link-text; padding-bottom: em(1); position: relative; }
+a:hover:after { width: 100%; }
+
+a:after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	width: 0;
+	color: $color__link-text;
+	border-bottom: 1px solid $color__link-text;
+	content: '';
+	-webkit-transition: width 0.5s;
+	-moz-transition: width 0.5s;
+	transition: width 0.5s;
+}
+
+.email { font-style: italic; }
+
+blockquote {
+	font-style: italic;
+	line-height: 1.5em;
+	margin: 50px auto;
+	margin: rem(50) auto;
+
+	p { margin-bottom: 0; }
+
+	.quotes:before {
+		content: '\201C';
+		margin-right: em(5);
+		font-size: 1.5em;
+	}
+
+	.quotes:after {
+		content: '\201D';
+		margin-left: em(5);
+		font-size: 1.5em;
+	}
+
+	span.cite {
+		display: block;
+		margin: em(10) auto;
+		padding-left: em(10);
+		font-style: normal;
+		line-height: 24px;
+		line-height: 1.5rem;
+	}
+	span.cite:before { content: '\2014'; margin-right: em(5); }
+}
+
+blockquote.big {
+	font-size: 1.5em;
+	text-align: center;
+
+	span.cite {
+		width: 50%;
+		font-size: 0.8rem;
+
+	}
+}
+
+blockquote.small {
+	font-size: 0.8em;
+	text-align: left;
+	width: 80%;
+}
+
+ul > li:not(:last-child), ol > li:not(:last-child) { margin-bottom: 1em; }
+ul { padding-left: em(20); }
+ol { padding-left: 0; counter-reset: i 0; list-style-type: none; }
+ol li:before {
+    content: counter(i) '. ';
+    counter-increment: i;
+    padding-right: 0.5em;
+    color: $color__accent-text;
+}

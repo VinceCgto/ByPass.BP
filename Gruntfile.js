@@ -6,7 +6,7 @@ grunt.initConfig({
 	watch: {
 		sass: {
 			files: ['<%= pkg.directories.sass %>/**/*.scss'],
-			tasks: ['sass:dev', 'autoprefixer:dev']
+			tasks: ['sass:dev'] // 'autoprefixer:dev'
 		},
 		html: {
 			files: ['index.html']

@@ -4,5 +4,5 @@
 
 /////////////*/
 
-::-moz-selection { background: $highlightBGColor; color: $highlightTextColor; text-shadow: none; }
-::selection { background: $highlightBGColor; color: $highlightTextColor; text-shadow: none; }
+::-moz-selection { background: $color__highlight-bg; color: $color__highlight-text; text-shadow: none; }
+::selection { background: $color__highlight-bg; color: $color__highlight-text; text-shadow: none; }

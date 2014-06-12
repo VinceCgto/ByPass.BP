@@ -7,7 +7,7 @@
 * { box-sizing: border-box; }
 
 html {
-	font-size: 100%;
+	font-size: 110%;
 	overflow-y: scroll;
 
 	-webkit-text-size-adjust: 100%;
@@ -18,10 +18,10 @@ body {
 	font-family: Georgia, Times, "Times New Roman", serif;
   	font-size: 1.1em;
   	line-height: 1.5em;
-  	letter-spacing: 0.5px;
+  	letter-spacing: em(0.4);
 
-  	background: $bodyBGColor;
-  	color: $bodyTextColor;
+  	background: $color__base-bg;
+  	color: $color__base-text;
 
 	text-rendering: optimizeLegibility;
 	// -webkit-font-smoothing: antialiased;  --- anti-aliasing if light text on dark BG
@@ -36,56 +36,27 @@ object, iframe,
 dl, dt, ol, ul,
 p, blockquote, pre,
 h1, h2, h3, h4, h5, h6,
-address, figure, fieldset, form, table, hr {
+address, figure, fieldset, form, table, hr, .md {
+	display: block;
 	margin: 0;
     margin-bottom:24px;
     margin-bottom:1.5rem;
-}
+} // md = margin down
 
-blockquote {
-	font-style: italic;
-	margin: 60px auto;
+section { margin-bottom:32px; margin-bottom:2rem; }
 
-	p { margin-bottom: 0; }
+.md.link-wrap {
+	margin-bottom:16px;
+	margin-bottom:1rem;
 
-	.quotes:before {
-		content: '“';
-		margin-right: 5px;
-		font-size: 1.5em;
-	}
-
-	.quotes:after {
-		content: '”';
-		margin-left: 5px;
-		font-size: 1.5em;
-	}
-
-	span.cite { display: block; margin: 10px auto; font-style: normal; padding-left: 10px; }
-	span.cite:before { content: '— '; }
-}
-
-blockquote.big {
-	font-size: 1.5em;
-	text-align: center;
-
-	span.cite {
-		width: 50%;
-		font-size: 0.8rem;
-
+	a {
+		display: inline-block;
 	}
 }
-
-blockquote.small {
-	font-size: 0.8em;
-	text-align: left;
-	width: 80%;
-}
-
-ul > li:not(:last-child) { margin-bottom: 1em; }
 
 .container-outer {
 	width: $desktop-outer;
-	margin: 0 auto;
+	margin: em(50) auto 0;
 }
 
 .container-inner {

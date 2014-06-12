@@ -5,13 +5,20 @@
 /////////////*/
 
 
+/*    BASE     */
+
+$color__base-bg: #FFF;
+$color__base-text: #444;
+
+/*    ACCENT     */
+
+$color__accent-text: #b55856; // Indianred
+
 /*    HIGHLIGHT     */
 
-$highlightBGColor: #b55856; // Indianred
-$highlightTextColor: #FFF; // White
+$color__highlight-bg: $color__accent-text; //  #b55856 = Indianred
+$color__highlight-text: #FFF; // White
 
+/*    HYPERLINKS     */
 
-/*    BODY     */
-
-$bodyBGColor: #FFF;
-$bodyTextColor: #444;
+$color__link-text: $color__accent-text; //  #b55856 = Indianred
