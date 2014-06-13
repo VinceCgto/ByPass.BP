@@ -13,7 +13,18 @@ h2, h3, h4, h5, h6 {
 
 h2 { font-size: 1em; }
 
-a { text-decoration: none; color: $color__link-text; padding-bottom: em(1); position: relative; }
+a {
+	text-decoration: none;
+	color: $color__link-text;
+	padding-bottom: em(1);
+	position: relative;
+
+	// animation-name: linkshow;
+	// animation-iteration-count: 1;
+	// animation-duration: 1s;
+	// animation-delay: 1.5s;
+}
+a:hover {}
 a:hover:after { width: 100%; }
 
 a:after {
@@ -25,10 +36,13 @@ a:after {
 	color: $color__link-text;
 	border-bottom: 1px solid $color__link-text;
 	content: '';
-	-webkit-transition: width 0.5s;
-	-moz-transition: width 0.5s;
 	transition: width 0.5s;
 }
+
+// @keyframes linkshow {
+//     0% { opacity: 0; }
+//     100% { opacity: 1; }
+// }
 
 .email { font-style: italic; }
 
@@ -87,5 +101,5 @@ ol li:before {
     content: counter(i) '. ';
     counter-increment: i;
     padding-right: 0.5em;
-    color: $color__accent-text;
+    color: $color__accent;
 }

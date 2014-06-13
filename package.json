@@ -1,16 +1,16 @@
 {
-  "name": "Name",
+  "name": "BP",
   "preferGlobal": "false",
   "version": "0.1.0",
-  "description": "Description",
+  "description": "Boilerplate",
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-autoprefixer": "~0.1.20130615",
+    "grunt-autoprefixer": "^0.7.5",
     "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-imagemin": "^0.7.1",
-    "grunt-contrib-sass": "~0.3.0",
-    "grunt-contrib-uglify": "~0.2.0",
-    "grunt-contrib-watch": "~0.4.4"
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1"
   },
   "directories": {
     "sass": "dev/sass",

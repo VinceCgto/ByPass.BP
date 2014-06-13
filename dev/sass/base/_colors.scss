@@ -12,13 +12,13 @@ $color__base-text: #444;
 
 /*    ACCENT     */
 
-$color__accent-text: #b55856; // Indianred
+$color__accent: #b55856; // Indianred
 
 /*    HIGHLIGHT     */
 
-$color__highlight-bg: $color__accent-text; //  #b55856 = Indianred
+$color__highlight-bg: $color__accent; //  #b55856 = Indianred
 $color__highlight-text: #FFF; // White
 
 /*    HYPERLINKS     */
 
-$color__link-text: $color__accent-text; //  #b55856 = Indianred
+$color__link-text: $color__accent; //  #b55856 = Indianred

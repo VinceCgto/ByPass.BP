@@ -49,14 +49,34 @@ section { margin-bottom:32px; margin-bottom:2rem; }
 	margin-bottom:16px;
 	margin-bottom:1rem;
 
-	a {
-		display: inline-block;
-	}
+	a { display: inline-block; }
 }
 
 .container-outer {
 	width: $desktop-outer;
 	margin: em(50) auto 0;
+
+	animation-name: contentSlideIn;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+	animation-delay: 0.3s;
+}
+
+.contentSlideIn {
+	transform: translateZ(0);
+}
+
+
+
+@keyframes contentSlideIn {
+    0% {
+        transform: translateY(em(200));
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .container-inner {
