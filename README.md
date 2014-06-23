@@ -1,3 +1,7 @@
+ **SPOILER ALERT:** contains HTML5, CSS3, Jquery & Grunt!
+ 
+ * * *
+
 # ByPass
 
 This boilerplate is my starting point for projects.
