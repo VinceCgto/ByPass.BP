@@ -6,8 +6,8 @@ It contains HTML5, CSS3 & Jquery snippets, is constructed to be set up with Grun
 
 
 ## Definition
-
 **by·pass**
+
 *verb*
 
 1. to go around or avoid (a place or area)
