@@ -382,6 +382,7 @@ th {
 /*    ACCENT     */
 /*    HIGHLIGHT     */
 /*    HYPERLINKS     */
+/*    FIGURES & IMAGES     */
 /*/////////////
 
  	MIXINS
@@ -407,7 +408,7 @@ th {
 	ALL ELEMENTS HIGH UP THE FOOD CHAIN
 
 //////////////////////////////////////////*/
-* {
+*, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -422,7 +423,7 @@ body {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 1.1em;
   line-height: 1.5em;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.00625em;
   background: white;
   color: #444444;
   text-rendering: optimizeLegibility;
@@ -441,6 +442,9 @@ address, figure, fieldset, form, table, hr, .md {
   margin: 0;
   margin-bottom: 24px;
   margin-bottom: 1.5rem; }
+
+img {
+  display: block; }
 
 section {
   margin-bottom: 32px;
@@ -464,31 +468,6 @@ section {
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s; }
 
-.contentSlideIn {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0); }
-
-@-webkit-keyframes contentSlideIn {
-  0% {
-    -webkit-transform: translateY(12.5em);
-    transform: translateY(12.5em);
-    opacity: 0; }
-
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1; } }
-
-@keyframes contentSlideIn {
-  0% {
-    -webkit-transform: translateY(12.5em);
-    transform: translateY(12.5em);
-    opacity: 0; }
-
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1; } }
 .container-inner {
   width: 700px;
   margin: 0 auto; }
@@ -533,6 +512,40 @@ a:after {
 .email {
   font-style: italic; }
 
+/*////////////////
+
+ 	COMPONENTS
+
+////////////////*/
+/*////////////////////////
+
+ 	IMAGES & FIGURES
+
+////////////////////////*/
+img {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0); }
+
+figure {
+  display: table; }
+
+figcaption {
+  color: #a8a8a8;
+  font-size: 0.6em;
+  font-style: italic;
+  margin-top: 3px;
+  display: table-caption;
+  caption-side: bottom;
+  text-align: center; }
+
+/*///////////////////
+
+ 	BLOCKQUOTES
+
+///////////////////*/
 blockquote {
   font-style: italic;
   line-height: 1.5em;
@@ -540,14 +553,14 @@ blockquote {
   margin: 3.125rem auto; }
   blockquote p {
     margin-bottom: 0; }
+  blockquote .quotes:before, blockquote .quotes:after {
+    font-size: 1.5em; }
   blockquote .quotes:before {
     content: '\201C';
-    margin-right: 0.3125em;
-    font-size: 1.5em; }
+    margin-right: 0.3125em; }
   blockquote .quotes:after {
     content: '\201D';
-    margin-left: 0.3125em;
-    font-size: 1.5em; }
+    margin-left: 0.3125em; }
   blockquote span.cite {
     display: block;
     margin: 0.625em auto;
@@ -571,6 +584,16 @@ blockquote.small {
   text-align: left;
   width: 80%; }
 
+/*/////////////
+
+ 	BUTTONS
+
+/////////////*/
+/*////////////
+
+ 	LISTS
+
+////////////*/
 ul > li:not(:last-child), ol > li:not(:last-child) {
   margin-bottom: 1em; }
 
@@ -588,21 +611,6 @@ ol li:before {
   padding-right: 0.5em;
   color: #b55856; }
 
-/*////////////////
-
- 	COMPONENTS
-
-////////////////*/
-/*/////////////
-
- 	BUTTONS
-
-/////////////*/
-/*////////////
-
- 	LISTS
-
-////////////*/
 /*/////////////
 
  	LOGO
@@ -633,6 +641,36 @@ ol li:before {
  	MEDIA
 
 ////////////*/
+/*////////////////////////
+
+ 	CSS 3 ANIMATIONS
+
+////////////////////////*/
+.contentSlideIn {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0); }
+
+@-webkit-keyframes contentSlideIn {
+  0% {
+    -webkit-transform: translateY(12.5em);
+    transform: translateY(12.5em);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes contentSlideIn {
+  0% {
+    -webkit-transform: translateY(12.5em);
+    transform: translateY(12.5em);
+    opacity: 0; }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; } }
 /*///////////////////////////
 
  	MEDIA QUERIES & PRINT

@@ -22,6 +22,8 @@
 
 ////////////////*/
 
+@import 'components/images';
+@import 'components/blockquotes';
 @import 'components/buttons';
 @import 'components/lists';
 @import 'components/logo';
@@ -44,5 +46,6 @@
 
 ////////////*/
 
+@import 'media/animations';
 @import 'media/media';
 @import 'media/retina';

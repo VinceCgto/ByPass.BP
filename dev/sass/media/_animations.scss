@@ -1,0 +1,19 @@
+/*////////////////////////
+
+ 	CSS 3 ANIMATIONS
+
+////////////////////////*/
+
+.contentSlideIn { transform: translateZ(0); }
+
+
+@keyframes contentSlideIn {
+    0% {
+        transform: translateY(em(200));
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

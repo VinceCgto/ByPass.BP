@@ -11,6 +11,10 @@ grunt.initConfig({
 		html: {
 			files: ['index.html']
 		},
+		js: {
+			files: ['<%= pkg.directories.js_dev %>/**/*'],
+			tasks: ['copy']
+		},
 		options: {
 			livereload: true
 		}
@@ -68,6 +72,14 @@ grunt.initConfig({
 			src: ['**/*.{png,jpg,gif}'],
 			dest: '<%= pkg.directories.img_min %>'
 		}
+	},
+	open : {
+	    dev : {
+	    	path: 'http://localhost:9090'
+	    },
+	    dist : {
+			path: 'http://localhost:9090'
+	    }
 	}
 });
 
@@ -77,10 +89,10 @@ grunt.loadNpmTasks ('grunt-contrib-sass');
 grunt.loadNpmTasks ('grunt-contrib-watch');
 grunt.loadNpmTasks ('grunt-contrib-copy');
 grunt.loadNpmTasks('grunt-contrib-imagemin');
+grunt.loadNpmTasks('grunt-open');
 
 // Default task(s).
-// grunt.registerTask('imgmin', ['imagemin']);
-grunt.registerTask('default', ['autoprefixer:dev','sass:dev', 'copy', 'imagemin', 'watch']);
-grunt.registerTask('dist', ['autoprefixer:dev','sass:dist', 'copy', 'imagemin', 'uglify']);
+grunt.registerTask('default', ['sass:dev', 'autoprefixer:dev', 'copy', 'imagemin', 'open:dev', 'watch']);
+grunt.registerTask('dist', ['sass:dist', 'autoprefixer:dev', 'copy', 'imagemin', 'uglify', 'open:dist']);
 
 };

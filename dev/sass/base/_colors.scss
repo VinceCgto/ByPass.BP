@@ -7,18 +7,27 @@
 
 /*    BASE     */
 
-$color__base-bg: #FFF;
-$color__base-text: #444;
+$color__base-bg: 					#FFF;
+$color__base-text: 					#444;
+
 
 /*    ACCENT     */
 
-$color__accent: #b55856; // Indianred
+$color__accent: 					#b55856; // Indianred
+
 
 /*    HIGHLIGHT     */
 
-$color__highlight-bg: $color__accent; //  #b55856 = Indianred
-$color__highlight-text: #FFF; // White
+$color__highlight-bg: 				$color__accent; //  #b55856 = Indianred
+$color__highlight-text: 			#FFF; // White
+
 
 /*    HYPERLINKS     */
 
-$color__link-text: $color__accent; //  #b55856 = Indianred
+$color__link-text: 					$color__accent; //  #b55856 = Indianred
+
+
+/*    FIGURES & IMAGES     */
+
+$color__figcaption-text: 			#a8a8a8; // Gray
+

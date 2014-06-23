@@ -4,7 +4,7 @@
 
 //////////////////////////////////////////*/
 
-* { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: border-box; }
 
 html {
 	font-size: 110%;
@@ -18,7 +18,7 @@ body {
 	font-family: Georgia, Times, "Times New Roman", serif;
   	font-size: 1.1em;
   	line-height: 1.5em;
-  	letter-spacing: em(0.4);
+  	letter-spacing: em(0.1);
 
   	background: $color__base-bg;
   	color: $color__base-text;
@@ -43,6 +43,8 @@ address, figure, fieldset, form, table, hr, .md {
     margin-bottom:1.5rem;
 } // md = margin down
 
+img { display: block; }
+
 section { margin-bottom:32px; margin-bottom:2rem; }
 
 .md.link-wrap {
@@ -60,23 +62,6 @@ section { margin-bottom:32px; margin-bottom:2rem; }
 	animation-iteration-count: 1;
 	animation-duration: 1s;
 	animation-delay: 0.3s;
-}
-
-.contentSlideIn {
-	transform: translateZ(0);
-}
-
-
-
-@keyframes contentSlideIn {
-    0% {
-        transform: translateY(em(200));
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 .container-inner {

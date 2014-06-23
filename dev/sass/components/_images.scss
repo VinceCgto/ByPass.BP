@@ -1,0 +1,20 @@
+/*////////////////////////
+
+ 	IMAGES & FIGURES
+
+////////////////////////*/
+
+img { transition: 0.3s; transform: translate(0,0); }
+
+figure { display: table; }
+
+figcaption {
+	color: $color__figcaption-text;
+	font-size: 0.6em;
+	font-style: italic;
+	margin-top: 3px;
+
+	display: table-caption;
+	caption-side: bottom;
+	text-align: center;
+}
