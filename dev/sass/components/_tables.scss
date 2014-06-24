@@ -1,0 +1,17 @@
+/*//////////////
+
+ 	TABLES
+
+/////////////*/
+
+table {
+	border-collapse:collapse;
+
+	th, td { padding: 15px; }
+
+	th { font-weight: normal; padding-bottom: 0; }
+
+	thead {
+		border-bottom: 1px solid #d3d3d3;
+	}
+}

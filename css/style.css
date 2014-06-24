@@ -383,6 +383,8 @@ th {
 /*    HIGHLIGHT     */
 /*    HYPERLINKS     */
 /*    FIGURES & IMAGES     */
+/*    HORIZONTAL RULE     */
+/*    PREFORMATTED TEXT & CODE BLOCKS     */
 /*/////////////
 
  	MIXINS
@@ -437,14 +439,25 @@ object, iframe,
 dl, dt, ol, ul,
 p, blockquote, pre,
 h1, h2, h3, h4, h5, h6,
-address, figure, fieldset, form, table, hr, .md {
+address, figure, fieldset, form, table, hr, .md, .dmd {
   display: block;
   margin: 0;
   margin-bottom: 24px;
   margin-bottom: 1.5rem; }
 
+.dmd {
+  margin-bottom: 48px;
+  margin-bottom: 3rem; }
+
+hr {
+  background: #e9e9e9;
+  border: 1px solid #e9e9e9;
+  height: 0px; }
+
 img {
-  display: block; }
+  display: block;
+  max-width: 100%;
+  width: 100%; }
 
 section {
   margin-bottom: 32px;
@@ -546,7 +559,8 @@ img {
   transform: translate(0, 0); }
 
 figure {
-  display: table; }
+  display: table;
+  min-width: 6.25em; }
 
 figcaption {
   color: #a8a8a8;
@@ -596,7 +610,7 @@ blockquote.big {
     font-size: 0.8rem; }
 
 blockquote.small {
-  font-size: 0.8em;
+  font-size: 0.9em;
   text-align: left;
   width: 80%; }
 
@@ -626,6 +640,69 @@ ol li:before {
   counter-increment: i;
   padding-right: 0.5em;
   color: #b55856; }
+
+/*////////////////////////////////////
+
+ 	PREFORMATED TEXT & CODE BLOCKS
+
+///////////////////////////////////*/
+pre {
+  padding-left: 1em;
+  position: relative; }
+
+pre.cb {
+  border: 1px solid lightgray;
+  border-bottom: 5px solid lightgray; }
+
+pre .syn {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
+
+pre:hover .syn {
+  opacity: 1; }
+
+code {
+  font-size: 0.85em;
+  white-space: pre-wrap;
+  overflow: auto; }
+  code .ct {
+    color: #b55856; }
+  code .com {
+    color: #aaaaaa; }
+  code .syn {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    background: lightgray;
+    padding: 2px 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0px;
+    font-size: 0.8em;
+    letter-spacing: 0.0625em; }
+  code ol {
+    display: inline-block;
+    margin: 0; }
+    code ol li {
+      display: inline;
+      margin: 0; }
+
+/*//////////////
+
+ 	TABLES
+
+/////////////*/
+table {
+  border-collapse: collapse; }
+  table th, table td {
+    padding: 15px; }
+  table th {
+    font-weight: normal;
+    padding-bottom: 0; }
+  table thead {
+    border-bottom: 1px solid #d3d3d3; }
 
 /*/////////////
 
@@ -695,10 +772,10 @@ ol li:before {
 @media print {
   img {
     max-width: 100% !important; } }
-@media all and (max-width: 1100px) {
+@media all and (max-width: 1150px) {
   .container-outer {
     width: 95%; } }
-@media all and (max-width: 700px) {
+@media all and (max-width: 750px) {
   .container-inner {
     width: 90%; } }
 @media screen and (max-width: 550px) {
@@ -706,7 +783,29 @@ ol li:before {
     font-size: 110%; }
 
   h1 {
-    font-size: 2em; } }
+    font-size: 2em; }
+
+  code {
+    white-space: pre-line; }
+
+  .nwl {
+    display: inline-block;
+    width: 100%; }
+
+  blockquote.small {
+    width: 90%; }
+
+  figure {
+    width: 100%;
+    text-align: center;
+    display: block; }
+
+  figcaption {
+    display: block; }
+
+  img {
+    width: auto;
+    display: inline-block; } }
 /*/////////////
 
  	RETINA

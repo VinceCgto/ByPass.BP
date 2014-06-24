@@ -6,7 +6,7 @@
 
 img { transition: 0.3s; transform: translate(0,0); }
 
-figure { display: table; }
+figure { display: table; min-width: em(100); }
 
 figcaption {
 	color: $color__figcaption-text;

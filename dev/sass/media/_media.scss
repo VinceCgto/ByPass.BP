@@ -8,11 +8,11 @@
 	img { max-width: 100% !important; }
 }
 
-@media all and (max-width: $desktop-outer) {
+@media all and (max-width: $desktop-outer+50) {
 	.container-outer { width: 95%; }
 }
 
-@media all and (max-width: $desktop-inner) {
+@media all and (max-width: $desktop-inner+50) {
 	.container-inner { width: 90%; }
 }
 
@@ -20,4 +20,16 @@
 	html { font-size: 110%; }
 
 	h1 { font-size: 2em; }
+
+	code { white-space: pre-line; }
+
+	.nwl { display: inline-block; width: 100%; } // newline = break to new line on small screens only
+
+	// LOC: components/_blockquote
+	blockquote.small { width: 90%; }
+
+	figure { width: 100%; text-align: center; display: block; }
+	figcaption { display: block; }
+
+	img { width: auto; display: inline-block; }
 }
