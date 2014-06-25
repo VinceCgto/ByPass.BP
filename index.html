@@ -30,12 +30,12 @@
 			</section>
 			<section id="paraLinks">
 				<h2>Paragraphs &amp; links</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, officiis, aliquid, eligendi, molestias recusandae <a href="http://google.be">dolore</a> repellat saepe excepturi quidem eos quo veritatis? Fuga iste aut sapiente totam facere amet! <strong>Voluptatum?</strong></p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, officiis, aliquid, eligendi, molestias recusandae <a href="http://google.be" class="link">dolore</a> repellat saepe excepturi quidem eos quo veritatis? Fuga iste aut sapiente totam facere amet! <strong>Voluptatum?</strong></p>
 				<div class="md link-wrap">
-					<a href="http://google.be">A hyperlink (Google)</a>
+					<a href="http://google.be" class="link">A hyperlink (Google)</a>
 				</div>
 				<div class="md link-wrap">
-					<a href="mailto:vcaregnato@gmail.com" class="email">vcaregnato@gmail.com</a>
+					<a href="mailto:vcaregnato@gmail.com" class="link email">vcaregnato@gmail.com</a>
 				</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odio magnam maxime maiores cumque eaque eum earum iste illum quisquam! Ullam, ipsa, unde iste aperiam maiores numquam <em>fugiat ea libero</em>.</p>
 			</section>
@@ -54,7 +54,7 @@ p q r s t u v w x y z { | } ~
 				<pre class="cb">
 <code><span class="syn">HTML</span>
 <span class="com">&lt;!-- Test comment --&gt;</span>
-<span class="ct">&lt;div&gt;</span>
+<span class="ct">&lt;div <span class="at">class</span>=<span class="val">"test"</span>&gt;</span>
     <span class="ct">&lt;p&gt;</span>Testing, 1, 2, 3!<span class="ct">&lt;/p&gt;</span>
     <span class="ct">&lt;code&gt;</span>Coding...<span class="ct">&lt;/code&gt;</span>
 <span class="ct">&lt;div&gt;</span>
@@ -63,10 +63,10 @@ p q r s t u v w x y z { | } ~
 				<pre class="cb">
 <code><span class="syn">JS</span>
 <span class="com">/* A function */</span>
-<strong>function</strong> <span class="ct">Panel</span>(element, canClose, closeHandler) {
+<span class="fun">function</span> <strong>Panel</strong>(element, canClose, closeHandler) {
     this.element = element;
     this.canClose = canClose;
-    this.closeHandler = <span class="nwl"><strong>function</strong> () {</span>
+    this.closeHandler = <span class="nwl"><span class="fun">function</span> () {</span>
     	                        if (closeHandler) closeHandler()
     	                    };
 }
@@ -76,7 +76,7 @@ p q r s t u v w x y z { | } ~
 <code><span class="syn">PHP</span>
 <ol>
 <li>&lt;?php</li>
-<li>    echo 'Hello World!';</li>
+<li>    echo <span class="val">'Hello World!'</span>;</li>
 <li>?&gt;</li>
 </ol>
 </code>
@@ -144,8 +144,6 @@ p q r s t u v w x y z { | } ~
 							<th>Head 3</th>
 							<th>Head 4</th>
 							<th>Head 5</th>
-							<th>Head 6</th>
-							<th>Head 7</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -155,29 +153,30 @@ p q r s t u v w x y z { | } ~
 							<td>Cell 3</td>
 							<td>Cell 4</td>
 							<td>Cell 5</td>
-							<td>Cell 6</td>
-							<td>Cell 7</td>
 						</tr>
 						<tr>
+							<td>Cell 6</td>
+							<td>Cell 7</td>
 							<td>Cell 8</td>
 							<td>Cell 9</td>
 							<td>Cell 10</td>
+						</tr>
+						<tr>
 							<td>Cell 11</td>
 							<td>Cell 12</td>
 							<td>Cell 13</td>
 							<td>Cell 14</td>
-						</tr>
-						<tr>
 							<td>Cell 15</td>
-							<td>Cell 16</td>
-							<td>Cell 17</td>
-							<td>Cell 18</td>
-							<td>Cell 19</td>
-							<td>Cell 20</td>
-							<td>Cell 21</td>
 						</tr>
 					</tbody>
 				</table>
+			</section>
+			<section id="buttons">
+				<h2>Buttons</h2>
+				<a href="" class="button">.button (link)</a>
+				<input type="button" name="button" value=".button" class="button">
+				<input type="button" name="button" value=".button.grey" class="button grey">
+				<input type="button" name="button" value=".button.big" class="button big">
 			</section>
 		</div>
 	</div>
