@@ -34,7 +34,7 @@
 				<div class="md link-wrap">
 					<a href="http://google.be" class="link">A hyperlink (Google)</a>
 				</div>
-				<div class="md link-wrap">
+				<div class="md link-wrap cap" data-caption="This is an email address">
 					<a href="mailto:vcaregnato@gmail.com" class="link email">vcaregnato@gmail.com</a>
 				</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odio magnam maxime maiores cumque eaque eum earum iste illum quisquam! Ullam, ipsa, unde iste aperiam maiores numquam <em>fugiat ea libero</em>.</p>
@@ -51,8 +51,8 @@ P Q R S T U V W X Y Z [ \ ] ^ _
 p q r s t u v w x y z { | } ~
 </samp>
 				</pre>
-				<pre class="cb">
-<code><span class="syn">HTML</span>
+				<pre class="cb cap" data-syntax="HTML" data-caption="This is an HTML code block">
+<code><!-- <span class="syn">HTML</span> -->
 <span class="com">&lt;!-- Test comment --&gt;</span>
 <span class="ct">&lt;div <span class="at">class</span>=<span class="val">"test"</span>&gt;</span>
     <span class="ct">&lt;p&gt;</span>Testing, 1, 2, 3!<span class="ct">&lt;/p&gt;</span>
@@ -60,8 +60,8 @@ p q r s t u v w x y z { | } ~
 <span class="ct">&lt;div&gt;</span>
 </code>
 				</pre>
-				<pre class="cb">
-<code><span class="syn">JS</span>
+				<pre class="cb"  data-syntax="JS">
+<code><!-- <span class="syn">JS</span> -->
 <span class="com">/* A function */</span>
 <span class="fun">function</span> <strong>Panel</strong>(element, canClose, closeHandler) {
     this.element = element;
@@ -72,8 +72,8 @@ p q r s t u v w x y z { | } ~
 }
 </code>
 				</pre>
-				<pre class="cb">
-<code><span class="syn">PHP</span>
+				<pre class="cb" data-syntax="PHP">
+<code><!-- <span class="syn">PHP</span> -->
 <ol>
 <li>&lt;?php</li>
 <li>    echo <span class="val">'Hello World!'</span>;</li>
@@ -85,7 +85,7 @@ p q r s t u v w x y z { | } ~
 			<section id="images">
 				<h2>Images</h2>
 				<div class="inline-fig">
-					<figure>
+					<figure class="cap" data-caption="This is a figure">
 					    <img src="img/200x200.gif" alt="200x200">
 					    <figcaption>A 200 by 200 image with a super large figcaption</figcaption>
 					</figure>
@@ -103,12 +103,10 @@ p q r s t u v w x y z { | } ~
 				<ul>
 					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.</li>
 					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.</li>
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.</li>
+					<li class="cap" data-caption="This is a list item for an undordered list">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.</li>
 					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.</li>
 					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.</li>
 				</ul>
-			</section>
-			<section>
 				<h3>Ordered list</h3>
 				<ol>
 					<li>First item</li>
@@ -128,7 +126,7 @@ p q r s t u v w x y z { | } ~
 				<p>People ignore design that ignores people!</p>
 				<span class="cite">Frank Chimero</span>
 			</blockquote>
-			<blockquote class="big">
+			<blockquote class="big cap" data-caption="This is a big blockquote">
 				<p class="quotes">A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools</p>
 				<span class="cite">Douglas Adams</span>
 			</blockquote>
@@ -136,13 +134,52 @@ p q r s t u v w x y z { | } ~
 		<div class="container-inner">
 			<section id="tables">
 				<h2>Tables</h2>
-				<table>
+				<div class="tblpan">
+					<table>
+						<thead>
+							<tr>
+								<th>Head 1</th>
+								<th>Head 2</th>
+								<th>Head 3</th>
+								<th>Head 4</th>
+								<th>Head 5</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Cell 1</td>
+								<td>Cell 2</td>
+								<td>Cell 3</td>
+								<td>Cell 4</td>
+								<td>Cell 5</td>
+							</tr>
+							<tr>
+								<td>Cell 6</td>
+								<td>Cell 7</td>
+								<td>Cell 8</td>
+								<td>Cell 9</td>
+								<td>Cell 10</td>
+							</tr>
+							<tr>
+								<td>Cell 11</td>
+								<td>Cell 12</td>
+								<td>Cell 13</td>
+								<td>Cell 14</td>
+								<td>Cell 15</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tblpan">
+					<table>
 					<thead>
 						<tr>
 							<th>Head 1</th>
 							<th>Head 2</th>
 							<th>Head 3</th>
 							<th>Head 4</th>
+							<th>Head 5</th>
+							<th>Head 5</th>
 							<th>Head 5</th>
 						</tr>
 					</thead>
@@ -153,12 +190,16 @@ p q r s t u v w x y z { | } ~
 							<td>Cell 3</td>
 							<td>Cell 4</td>
 							<td>Cell 5</td>
+							<td>Cell 5</td>
+							<td>Cell 5</td>
 						</tr>
 						<tr>
 							<td>Cell 6</td>
 							<td>Cell 7</td>
 							<td>Cell 8</td>
 							<td>Cell 9</td>
+							<td>Cell 10</td>
+							<td>Cell 10</td>
 							<td>Cell 10</td>
 						</tr>
 						<tr>
@@ -167,9 +208,12 @@ p q r s t u v w x y z { | } ~
 							<td>Cell 13</td>
 							<td>Cell 14</td>
 							<td>Cell 15</td>
+							<td>Cell 15</td>
+							<td>Cell 15</td>
 						</tr>
 					</tbody>
 				</table>
+				</div>
 			</section>
 			<section id="buttons">
 				<h2>Buttons</h2>

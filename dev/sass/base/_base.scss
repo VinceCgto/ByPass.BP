@@ -15,7 +15,7 @@ html {
 }
 
 body {
-	font-family: $base-font;
+	font-family: $font-base;
   	font-size: 1em;
   	line-height: 1.5em;
   	letter-spacing: em(0.1);
@@ -36,7 +36,7 @@ object, iframe,
 dl, dt, ol, ul,
 p, blockquote, pre,
 h1, h2, h3, h4, h5, h6,
-address, figure, fieldset, form, table, hr, .md, .dmd {
+address, figure, fieldset, form, table, hr, .md, .dmd, .tblpan {
 	display: block;
 	margin: 0;
     margin-bottom:24px;

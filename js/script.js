@@ -1,9 +1,1 @@
-$(document).ready(function(){
-
-	// CONTENT SLIDE IN
-	setTimeout(function(){
-		$('.container-outer').removeClass('contentSlideIn');
-	},2000);
-
-
-});
+$(document).ready(function(){setTimeout(function(){$(".container-outer").removeClass("contentSlideIn")},2e3)});

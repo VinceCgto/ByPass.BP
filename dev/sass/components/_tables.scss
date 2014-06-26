@@ -7,12 +7,31 @@
 table {
 	border-collapse:collapse;
 	width: 100%;
+	font-family: $font-heading;
+	max-width: 100%;
 
-	th, td { padding: 15px; }
+	th, td { padding: 15px; min-width: 100px; text-align: left; }
 
 	th { font-weight: normal; padding-bottom: 0; }
 
 	thead {
 		border-bottom: 1px solid #d3d3d3;
 	}
+}
+
+.tblpan {
+	max-width: 100%;
+	max-height: 400px;
+	overflow: auto;
+	position: relative;
+}
+
+.tblpan:after {
+	content: '* Swipe right to scroll';
+	color: #aaa;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-size: 0.6em;
+	width: 100%;
 }
