@@ -78,7 +78,7 @@ grunt.initConfig({
 	    	path: 'http://localhost:9090'
 	    },
 	    dist : {
-			path: 'http://localhost:9090'
+			path: 'http://caregnato.be/dev/bypass'
 	    }
 	}
 });

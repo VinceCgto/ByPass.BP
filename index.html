@@ -14,6 +14,23 @@
     <script>!window.jQuery && document.write('<script src="js/libs/jquery-1.11.1.min.js"><\/script>')</script>
 </head>
 <body>
+<!-- 	<svg id="svg-source" height="0" version="1.1"
+	  xmlns="http://www.w3.org/2000/svg" style="position:absolute; margin-left: -100%"
+	  xmlns:xlink="http://www.w3.org/1999/xlink">
+	  <g id="image">
+	    <g>
+	      <g>
+	        <path d="M28.729,4.699H3.271C1.467,4.699,0,6.166,0,7.969v16.062c0,1.803,1.467,3.27,3.271,3.27h25.459
+				c1.804,0,3.271-1.467,3.271-3.27V7.969C32,6.166,30.533,4.699,28.729,4.699z M30.132,23.618h-0.935l-8.292-1.946l-5.723-4.286
+				l-3.387,2.049l-4.672-5.301l-4.321,5.301L1.868,23.05V7.969c0-0.772,0.629-1.401,1.402-1.401h25.459
+				c0.773,0,1.402,0.629,1.402,1.401V23.618z"></path>
+	      </g>
+	      <g>
+	        <circle cx="24.979" cy="11.46" r="2.674"></circle>
+	      </g>
+	    </g>
+	  </g>
+	</svg> -->
 	<div class="container-outer contentSlideIn">
 		<div class="container-inner">
 			<div class="logo"></div>
@@ -29,18 +46,30 @@
 				<h6>h6. heading</h6>
 			</section>
 			<section id="paraLinks">
-				<h2>Paragraphs &amp; links</h2>
+				<h2>
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8 8">
+						  <path d="M0 0v2h.5c0-.55.45-1 1-1h1.5v5.5c0 .28-.22.5-.5.5h-.5v1h4v-1h-.5c-.28 0-.5-.22-.5-.5v-5.5h1.5c.55 0 1 .45 1 1h.5v-2h-8z" />
+						</svg>
+					</span>
+					Paragraphs &amp; links</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, officiis, aliquid, eligendi, molestias recusandae <a href="http://google.be" class="link">dolore</a> repellat saepe excepturi quidem eos quo veritatis? Fuga iste aut sapiente totam facere amet! <strong>Voluptatum?</strong></p>
-				<div class="md link-wrap">
+				<div class="link-wrap">
 					<a href="http://google.be" class="link">A hyperlink (Google)</a>
 				</div>
-				<div class="md link-wrap cap" data-caption="This is an email address">
+				<div class="link-wrap cap" data-caption="This is an email address">
 					<a href="mailto:vcaregnato@gmail.com" class="link email">vcaregnato@gmail.com</a>
 				</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odio magnam maxime maiores cumque eaque eum earum iste illum quisquam! Ullam, ipsa, unde iste aperiam maiores numquam <em>fugiat ea libero</em>.</p>
 			</section>
 			<section id="preCode">
-				<h2>Formatted text &amp; code blocks</h2>
+				<h2>
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8 8">
+						  <path d="M5 1l-3 6h1l3-6h-1zm-4 1l-1 2 1 2h1l-1-2 1-2h-1zm5 0l1 2-1 2h1l1-2-1-2h-1z" />
+						</svg>
+					</span>
+					Formatted text &amp; code blocks</h2>
 				<pre>
 <samp>
 ! " # $ % &amp; ' ( ) * + , - . /
@@ -71,7 +100,7 @@ p q r s t u v w x y z { | } ~
     	                    };
 }
 </code>
-				</pre>
+				</pre>Lorem <span style="color:#00497e;">ipsum</span> dolor sit amet, consectetur adipisicing elit. <span style="color:#00497e;">Veritatis</span><span style="color:#ff0000;">°</span> culpa nesciunt cupiditate quibusdam repudiandae vitae.
 				<pre class="cb" data-syntax="PHP">
 <code><!-- <span class="syn">PHP</span> -->
 <ol>
@@ -83,7 +112,12 @@ p q r s t u v w x y z { | } ~
 			</pre>
 			</section>
 			<section id="images">
-				<h2>Images</h2>
+				<h2><span class="icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8 8">
+							  <path d="M0 0v8h8v-8h-8zm1 1h6v3l-1-1-1 1 2 2v1h-1l-4-4-1 1v-3z" />
+							</svg>
+						</span>
+						Images</h2>
 				<div class="inline-fig">
 					<figure class="cap" data-caption="This is a figure">
 					    <img src="img/200x200.gif" alt="200x200">
@@ -94,11 +128,19 @@ p q r s t u v w x y z { | } ~
 					    <img src="http://placehold.it/700x200" alt="700x200">
 					    <figcaption>A 700 by 200 image with a super large figcaption</figcaption>
 					</figure>
+
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quae itaque autem odio dolor nemo obcaecati, ipsam inventore explicabo voluptatum incidunt facere numquam vel optio cupiditate ipsa sunt dicta sit.</p>
 				</div>
 			</section>
 			<section id="lists">
-				<h2>Lists</h2>
+				<h2>
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8 8">
+						  <path d="M.5 0c-.276 0-.5.224-.5.5s.224.5.5.5.5-.224.5-.5-.224-.5-.5-.5zm1.5 0v1h6v-1h-6zm-1.5 2c-.276 0-.5.224-.5.5s.224.5.5.5.5-.224.5-.5-.224-.5-.5-.5zm1.5 0v1h6v-1h-6zm-1.5 2c-.276 0-.5.224-.5.5s.224.5.5.5.5-.224.5-.5-.224-.5-.5-.5zm1.5 0v1h6v-1h-6zm-1.5 2c-.276 0-.5.224-.5.5s.224.5.5.5.5-.224.5-.5-.224-.5-.5-.5zm1.5 0v1h6v-1h-6z"
+						  />
+						</svg>
+					</span>
+					Lists</h2>
 				<h3>Unordered list</h3>
 				<ul>
 					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.</li>
@@ -117,7 +159,13 @@ p q r s t u v w x y z { | } ~
 		</div>
 		<section id="blockquotes">
 			<div class="container-inner">
-				<h2>Blockquotes</h2>
+				<h2>
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8 8">
+						  <path d="M3 1c-1.651 0-3 1.349-3 3v3h3v-3h-2c0-1.109.891-2 2-2v-1zm5 0c-1.651 0-3 1.349-3 3v3h3v-3h-2c0-1.109.891-2 2-2v-1z" />
+						</svg>
+					</span>
+					Blockquotes</h2>
 				<blockquote class="small"><p class="quotes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, harum, laudantium, laboriosam, saepe quae architecto aliquid perspiciatis pariatur nisi tempora officiis facilis atque alias! Recusandae fuga deserunt optio ab eius.</p>
 				<span class="cite">John Doe</span>
 				</blockquote>

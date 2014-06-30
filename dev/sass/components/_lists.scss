@@ -6,12 +6,15 @@
 
 ul > li:not(:last-child), ol > li:not(:last-child) { margin-bottom: 1em; }
 ul { padding-left: em(20); }
-ol { padding-left: 0; counter-reset: i 0; list-style-type: none; }
+ol {counter-reset: i 0; list-style-type: none;  padding-left: 0; }
 ol li:before {
     content: counter(i) '. ';
     counter-increment: i;
-    padding-right: 0.5em;
-    color: $color__accent;
     user-select: none;
+
+    color: $color__accent;
+
+    padding-right: .5em;
+
     -webkit-touch-callout: none;
 }

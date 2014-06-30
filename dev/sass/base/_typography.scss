@@ -11,31 +11,36 @@ h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
 
-h1 { font-size: 2.5em; letter-spacing: 5px; font-weight: 100; }
+h1 { font-size: 2.5em; font-weight: 100; letter-spacing: 5px; }
 h2 { font-size: 1.1em; }
-h3 { font-size: 0.9em; color: #666; }
-h4 { font-size: 0.8em; color: #888; }
-h5, h6 { font-size: 0.7em; color: #aaa; }
+h3 { font-size: .9em; color: #666; }
+h4 { font-size: .8em; color: #888; }
+h5, h6 { font-size: .7em; color: #aaa; }
 
 a {
 	text-decoration: none;
+
 	color: $color__link-text;
-	padding-bottom: em(1);
+
 	position: relative;
+	padding-bottom: em(1);
 }
-a.link:hover {}
+
 a.link:hover:after { width: 100%; }
 
 a.link:after {
+	content: '';
+
+	color: $color__link-text;
+	border-bottom: 1px solid $color__link-text;
+
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	overflow: hidden;
 	width: 0;
-	color: $color__link-text;
-	border-bottom: 1px solid $color__link-text;
-	content: '';
-	transition: width 0.5s;
+
+	transition: width .5s;
 }
 
 .email { font-style: italic; }

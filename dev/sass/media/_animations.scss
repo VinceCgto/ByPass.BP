@@ -9,11 +9,13 @@
 
 @keyframes contentSlideIn {
     0% {
-        transform: translateY(em(200));
         opacity: 0;
+
+        transform: translateY(em(200));
     }
     100% {
-        transform: translateY(0);
         opacity: 1;
+
+        transform: translateY(0);
     }
 }

@@ -4,17 +4,19 @@
 
 ////////////////////////*/
 
-img { transition: 0.3s; transform: translate(0,0); }
+img { transition: .3s; transform: translate(0,0); }
 
 figure { display: table; min-width: em(100); }
 
 figcaption {
-	color: $color__figcaption-text;
-	font-size: 0.6em;
+	font-size: .6em;
 	font-style: italic;
-	margin-top: 3px;
+	text-align: center;
+
+	color: $color__figcaption-text;
+
+	caption-side: bottom;
 
 	display: table-caption;
-	caption-side: bottom;
-	text-align: center;
+	margin-top: 3px;
 }

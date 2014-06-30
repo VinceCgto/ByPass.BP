@@ -5,27 +5,31 @@
 /////////////*/
 
 button, .button, [type=button], [type=submit] {
-	background-color: $color__button-bg;
+	cursor: pointer;
+
+	font-family: $font-heading;
+	font-size: .75em;
+	line-height: 1em;
 	text-align: center;
+	white-space: nowrap;
+	letter-spacing: em(1);
+	text-overflow: ellipsis;
+
 	color: $color__button-text;
+	border: none;
+	border-radius: 3px;
+	background-color: $color__button-bg;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+
+	position: relative;
 	display: inline-block;
+	box-sizing: initial;
 	height: 1em;
 	margin: 0 0 10px;
-	padding: 0.7em;
-	position: relative;
-	border: none;
-	cursor: pointer;
-	border-radius: 3px;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	font-family: $font-heading;
-	font-size: 0.75em;
-	line-height: 1em;
+	padding: .7em;
+
 	-webkit-appearance: none;
 	-webkit-font-smoothing: antialiased;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-	box-sizing: initial;
-	letter-spacing: em(1);
 }
 
 button.big, .button.big, [type=button].big, [type=submit].big {

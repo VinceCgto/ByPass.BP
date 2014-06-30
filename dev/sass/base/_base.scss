@@ -8,6 +8,7 @@
 
 html {
 	font-size: 117%;
+
 	overflow-y: scroll;
 
 	-webkit-text-size-adjust: 100%;
@@ -18,14 +19,14 @@ body {
 	font-family: $font-base;
   	font-size: 1em;
   	line-height: 1.5em;
-  	letter-spacing: em(0.1);
 
-  	background: $color__base-bg;
   	color: $color__base-text;
+  	background: $color__base-bg;
+
+  	letter-spacing: em(.1);
 
 	text-rendering: optimizeLegibility;
 	// -webkit-font-smoothing: antialiased;  --- anti-aliasing if light text on dark BG
-
   	-webkit-tap-highlight-color: transparent;
 	-webkit-backface-visibility: hidden;
 }
@@ -39,22 +40,21 @@ h1, h2, h3, h4, h5, h6,
 address, figure, fieldset, form, table, hr, .md, .dmd, .tblpan {
 	display: block;
 	margin: 0;
-    margin-bottom:24px;
-    margin-bottom:1.5rem;
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 } // md = margin down
 
 .dmd { margin-bottom: 48px; margin-bottom: 3rem; } // double margin down
 
-hr { background: $color__hr; border: 1px solid $color__hr; height: 0px; }
+hr {border: 1px solid $color__hr;  background: $color__hr; height: 0px; }
 
-img { display: block; max-width: 100%; width: 100%; }
+img { display: block; width: 100%; max-width: 100%; }
 
-section { margin-bottom:32px; margin-bottom:2rem; }
+section { margin-bottom: 32px; margin-bottom: 2rem; }
 
-.md.link-wrap {
-	margin-bottom:16px;
-	margin-bottom:1rem;
-
+.link-wrap {
+	margin-bottom: 16px;
+	margin-bottom: 1rem;
 	a { display: inline-block; }
 }
 
@@ -63,12 +63,24 @@ section { margin-bottom:32px; margin-bottom:2rem; }
 	margin: em(50) auto 0;
 
 	animation-name: contentSlideIn;
-	animation-iteration-count: 1;
 	animation-duration: 1s;
-	animation-delay: 0.3s;
+	animation-delay: .3s;
+	animation-iteration-count: 1;
 }
 
 .container-inner {
 	width: $desktop-inner;
 	margin: 0 auto;
+}
+
+.icon {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-top: 2px;
+	margin-right: 5px;
+
+	vertical-align: top;
+
+	fill: $color__accent;
 }
