@@ -1,0 +1,19 @@
+/*//////////
+
+ 	SVG
+
+//////////*/
+
+#svg-source { display: none; }
+
+.icon {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin-top: 2px;
+	margin-right: 5px;
+
+	vertical-align: top;
+
+	fill: $color__accent;
+}

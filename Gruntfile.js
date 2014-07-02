@@ -69,7 +69,7 @@ grunt.initConfig({
 		files: {
 			expand: true,
 			cwd: '<%= pkg.directories.img %>',
-			src: ['**/*.{png,jpg,gif}'],
+			src: ['**/*.{png,jpg,gif,svg}'],
 			dest: '<%= pkg.directories.img_min %>'
 		}
 	},

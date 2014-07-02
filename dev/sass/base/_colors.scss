@@ -4,10 +4,10 @@
 
 /////////////*/
 
-$color__def-lightgrey: #D3D3D3;
-$color__def-darkgrey: #AAA;
-$color__def-white: #FFF;
-$color__def-red: #b55856;
+$color__lightgrey: #D3D3D3;
+$color__darkgrey: #AAA;
+$color__white: #FFF;
+$color__red: #b55856;
 
 
 /*    BASE     */
@@ -18,23 +18,23 @@ $color__base-text: 					#444;					// Grey
 
 /*    ACCENT     */
 
-$color__accent: 					$color__def-red; 		// Indianred
+$color__accent: 					$color__red; 			// Indianred
 
 
 /*    HIGHLIGHT     */
 
-$color__highlight-bg: 				$color__def-red; 		// Indianred
-$color__highlight-text: 			$color__def-white;		// White
+$color__highlight-bg: 				$color__red; 			// Indianred
+$color__highlight-text: 			$color__white;			// White
 
 
 /*    HYPERLINKS     */
 
-$color__link-text: 					$color__def-red; 		// Indianred
+$color__link-text: 					$color__red; 			// Indianred
 
 
 /*    FIGURES & IMAGES     */
 
-$color__figcaption-text: 			$color__def-darkgrey; 	// Grey
+$color__figcaption-text: 			$color__darkgrey; 		// Grey
 
 
 /*    HORIZONTAL RULE     */
@@ -44,19 +44,30 @@ $color__hr: 						#e9e9e9; 				// Grey
 
 /*    PREFORMATTED TEXT & CODE BLOCKS     */
 
-$color__pre-border: 				$color__def-lightgrey; 		// Grey
+$color__pre-border: 				$color__lightgrey; 		// Grey
 $color__syn-bg:						$color__pre-border; 	// Grey
-$color__syn-text:					$color__def-white;		// White
+$color__syn-text:					$color__white;			// White
 
-$color__code_comment-text:			$color__def-darkgrey;	// Grey
+$color__code_comment-text:			$color__darkgrey;		// Grey
 
 
 /*    BUTTONS     */
 
-$color__button-bg: 					$color__def-red; 		// Indianred
-$color__button-text:				$color__def-white;		// White
+$color__button-bg: 					$color__red; 			// Indianred
+$color__button-text:				$color__white;			// White
 
 $color__button-hover-bg:			#BC6967;				// Indianred ( light )
 
 $color__button-grey-bg:				#BEBEBE; 				// Grey
-$color__button-grey-hover-bg:		$color__def-lightgrey; 		// Grey
+$color__button-grey-hover-bg:		$color__lightgrey; 		// Grey
+
+
+/*    FORMS     */
+
+$color__field-border: 				$color__darkgrey; 		// Grey
+
+
+/*    LOGO     */
+
+$color__logo-bg: 					$color__lightgrey; 		// Grey
+$color__logo-fill:					$color__white;

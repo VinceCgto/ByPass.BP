@@ -1,0 +1,84 @@
+/*/////////////
+
+ 	FORMS
+
+/////////////*/
+
+textarea, input, select, button { outline: 0px; }
+fieldset, textarea, input[type=password], input[type=text], input[type=email], input[type=number] {
+	border: 1px solid rgba(0,0,0,.1);
+}
+
+fieldset label {
+	font-size: .7em;
+	font-style: italic;
+
+	display: block;
+	margin: 0 0 3px;
+}
+
+.wide { width: 100%!important; }
+
+
+textarea, input[type=password], input[type=text], input[type=email], input[type=number] {
+	color: rgba(0,0,0,.5);
+	background-color: $color__white;
+
+	display: block;
+	width: 220px;
+	height: 45px;
+	margin-bottom: .5rem;
+	padding: 10px;
+
+	transition: border-color .05s;
+
+	-webkit-appearance: none;
+}
+
+
+textarea:focus, input[type=password]:focus, input[type=text]:focus, input[type=email]:focus, input[type=number]:focus {
+	color: $color__field-border;
+	border-color: rgba(0,0,0,.25);
+}
+
+textarea {
+	resize: both;
+
+	overflow: auto;
+	width: 400px;
+	height: 80px;
+}
+
+
+// CHECKBOX
+
+.checkbox input[type=checkbox] { display: none; }
+.checkbox label { cursor: pointer; }
+
+.checkbox label:before {
+	content: '';
+
+	vertical-align: sub;
+
+	opacity: .75;
+	background-color: $color__white;
+	box-shadow: 0 0 0 1px rgba(0,0,0,.25) inset;
+
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+
+.checkbox input[type=checkbox]:checked + label:before {
+	background: url('../img/static/check.svg');
+	background-repeat: no-repeat;
+	background-position: 3px 2px;
+	background-size: contain;
+	background-size: 15px 15px;
+}
+
+
+.checkbox input[type=checkbox]:disabled + label, .checkbox input[type=checkbox]:disabled + label:before {
+	opacity: .4;
+}

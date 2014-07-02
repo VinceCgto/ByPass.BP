@@ -4,11 +4,7 @@
 
 ///////////////////////////*/
 
-@media print {
-	img { max-width: 100% !important; }
-}
-
-
+@media print { img { max-width: 100% !important; } }
 
 @media all and (max-width: 1500px) {
 	.container-outer > section > .cap:after {
@@ -16,7 +12,7 @@
 
 		opacity: 1;
 		border: 0;
-		border-top: 1px solid #e3e3e3;
+		border-top: 1px solid $color__lightgrey;
 
 		position: relative;
 		right: auto;
@@ -46,7 +42,7 @@
 
 		opacity: 1;
 		border: 0;
-		border-top: 1px solid #e3e3e3;
+		border-top: 1px solid $color__lightgrey;
 
 		position: relative;
 		right: auto;
@@ -56,6 +52,8 @@
 		padding-top: 10px;
 		padding-right: 0;
 	}
+
+	.logo { position: relative; }
 }
 
 @media screen and (max-width: 550px) {
@@ -63,19 +61,19 @@
 
 	h1 { font-size: 2em; }
 
-	code { white-space: pre-line; }
-
 	.nwl { display: inline-block; width: 100%; } // newline = break to new line on small screens only
 
-	// LOC: components/_blockquote
+
+	/*   COMPONENTS   */
+
 	blockquote.small { width: 90%; }
+	code { white-space: pre-line; }
 
-	figure {text-align: center; display: block;  width: 100%; }
+	figure { text-align: center; display: block;  width: 100%; }
 	figcaption { display: block; }
+	img { display: inline-block;  width: auto; }
 
-	img {display: inline-block;  width: auto; }
+	.icon { margin-top: 0; }
 
-	.icon {
-		margin-top: 0;
-	}
+	textarea, input[type=password], input[type=text], input[type=email], input[type=number] { width: 100%; }
 }
