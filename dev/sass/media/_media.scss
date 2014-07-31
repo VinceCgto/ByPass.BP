@@ -4,6 +4,40 @@
 
 ///////////////////////////*/
 
+.crappie  {
+	.checkbox label:before, .radio label:before {
+		display: none;
+	}
+
+	.checkbox input[type=checkbox], .radio input[type=radio] {
+		display: inline;
+		zoom: 1;
+		margin-bottom: 0;
+	}
+	.cap:after {
+		text-align: left;
+
+		opacity: 1;
+		border: 0;
+		border-top: 1px solid $color__lightgrey;
+
+		position: relative;
+		right: auto;
+		display: block;
+		width: 100%;
+		margin-top: 10px;
+		padding-top: 10px;
+		padding-right: 0;
+		margin-bottom: 1em;
+	}
+
+	.big.cap:after {
+		text-align: center;
+	}
+
+	.icon { display: none; }
+}
+
 @media print { img { max-width: 100% !important; } }
 
 @media all and (max-width: 1500px) {

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE]><![endif]-->
+<!--[if lt IE 9 ]> <html lang="en" class="crappie">    <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -11,7 +13,7 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
     <![endif]-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>!window.jQuery && document.write('<script src="js/libs/jquery-1.11.1.min.js"><\/script>')</script>
+    <script>!window.jQuery && document.write('<script src="js/libs/jquery.min.js"><\/script>')</script>
 </head>
 <body>
 	<svg id="svg-source" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24">
@@ -43,7 +45,8 @@
   			<path d="M0 0v7h7v-3.594l-1 1v1.594h-5v-5h3.594l1-1h-5.594zm7 0l-3 3-1-1-1 1 2 2 4-4-1-1z" />
 	    </g>
 	</svg>
-	<div class="logo"><span class="creator"><i>created by</i> <br><strong>Vince Caregnato</strong></span><div class="logo-icon"><div class="flame-anim"></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8 8"><path d="M2 0c1 2-2 3-2 5l2 3c-.98-1.98 2-3 2-5l-2-3zm3 3c1 2-2 3-2 5h3c.4 0 1-.5 1-2 0-2-2-3-2-3z" /></svg></div></div>
+	<div class="logo"><span class="creator"><i>created by</i> <br><strong>Vince Caregnato</strong></span><div class="logo-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8 8"><path d="M1.5 0c-.828 0-1.5.672-1.5 1.5 0 .656.414 1.202 1 1.406v2.188c-.586.204-1 .75-1 1.406 0 .828.672 1.5 1.5 1.5s1.5-.672 1.5-1.5c0-.595-.341-1.101-.844-1.344.09-.09.205-.156.344-.156h2c.823 0 1.5-.677 1.5-1.5v-.594c.586-.204 1-.75 1-1.406 0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5c0 .656.414 1.202 1 1.406v.594c0 .277-.223.5-.5.5h-2c-.171 0-.346.04-.5.094v-1.188c.586-.204 1-.75 1-1.406 0-.828-.672-1.5-1.5-1.5z"
+  /></svg></div></div>
 	<div class="container-outer contentSlideIn">
 		<div class="container-inner">
 			<h1>ByPass styleguide</h1>
@@ -82,7 +85,8 @@
 						<svg viewBox="0 0 8 8"><g filter=""><use xlink:href="#code"></use></g></svg>
 					</span>
 					Formatted text &amp; code blocks</h2>
-				<pre>
+<!-- DON'T INDENT PRE, IT COULD MESS WITH THE FORMATTING -->
+<pre>
 <samp>
 ! " # $ % &amp; ' ( ) * + , - . /
 0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
@@ -91,18 +95,22 @@ P Q R S T U V W X Y Z [ \ ] ^ _
 ` a b c d e f g h i j k l m n o
 p q r s t u v w x y z { | } ~
 </samp>
-				</pre>
-				<pre class="cb cap" data-syntax="HTML" data-caption="This is an HTML code block">
-<code><!-- <span class="syn">HTML</span> -->
+</pre>
+
+<!-- HTML CODE -->
+<pre class="cb cap" data-syntax="HTML" data-caption="This is an HTML code block">
+<code>
 <span class="com">&lt;!-- Test comment --&gt;</span>
 <span class="ct">&lt;div <span class="at">class</span>=<span class="val">"test"</span>&gt;</span>
     <span class="ct">&lt;p&gt;</span>Testing, 1, 2, 3!<span class="ct">&lt;/p&gt;</span>
     <span class="ct">&lt;code&gt;</span>Coding...<span class="ct">&lt;/code&gt;</span>
 <span class="ct">&lt;div&gt;</span>
 </code>
-				</pre>
-				<pre class="cb"  data-syntax="JS">
-<code><!-- <span class="syn">JS</span> -->
+</pre>
+
+<!-- JS CODE -->
+<pre class="cb"  data-syntax="JS">
+<code>
 <span class="com">/* A function */</span>
 <span class="fun">function</span> <strong>Panel</strong>(element, canClose, closeHandler) {
     this.element = element;
@@ -112,9 +120,11 @@ p q r s t u v w x y z { | } ~
     	                    };
 }
 </code>
-				</pre>Lorem <span style="color:#00497e;">ipsum</span> dolor sit amet, consectetur adipisicing elit. <span style="color:#00497e;">Veritatis</span><span style="color:#ff0000;">°</span> culpa nesciunt cupiditate quibusdam repudiandae vitae.
-				<pre class="cb" data-syntax="PHP">
-<code><!-- <span class="syn">PHP</span> -->
+</pre>
+
+<!-- PHP CODE -->
+<pre class="cb" data-syntax="PHP">
+<code>
 <ol>
 <li>&lt;?php</li>
 <li>    echo <span class="val">'Hello World!'</span>;</li>
@@ -122,6 +132,7 @@ p q r s t u v w x y z { | } ~
 </ol>
 </code>
 			</pre>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, totam facilis <code>.container</code>, provident impedit sunt molestiae <code>font-size</code> rerum. Adipisci et sapiente, tenetur sit, est natus totam. Quidem repellat fuga neque.</p>
 			</section>
 			<section id="images">
 				<h2><span class="icon">
@@ -150,11 +161,21 @@ p q r s t u v w x y z { | } ~
 					Lists</h2>
 				<h3>Unordered list</h3>
 				<ul>
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.</li>
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.</li>
-					<li class="cap" data-caption="This is a list item for an undordered list">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.</li>
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.</li>
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.</li>
+					<li>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.
+					</li>
+					<li>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.
+					</li>
+					<li class="cap" data-caption="This is a list item for an undordered list">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.
+					</li>
+					<li>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.
+					</li>
+					<li>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.
+					</li>
 				</ul>
 				<h3>Ordered list</h3>
 				<ol>
@@ -229,59 +250,59 @@ p q r s t u v w x y z { | } ~
 				</div>
 				<div class="tblpan">
 					<table>
-					<thead>
-						<tr>
-							<th>Heading 1</th>
-							<th>Heading 2</th>
-							<th>Heading 3</th>
-							<th>Heading 4</th>
-							<th>Heading 5</th>
-							<th>Heading 6</th>
-							<th>Heading 7</th>
-							<th>Heading 8</th>
-							<th>Heading 9</th>
-							<th>Heading 10</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Cell 1</td>
-							<td>Cell 2</td>
-							<td>Cell 3</td>
-							<td>Cell 4</td>
-							<td>Cell 5</td>
-							<td>Cell 6</td>
-							<td>Cell 7</td>
-							<td>Cell 8</td>
-							<td>Cell 9</td>
-							<td>Cell 10</td>
-						</tr>
-						<tr>
-							<td>Cell 11</td>
-							<td>Cell 12</td>
-							<td>Cell 13</td>
-							<td>Cell 14</td>
-							<td>Cell 15</td>
-							<td>Cell 16</td>
-							<td>Cell 17</td>
-							<td>Cell 18</td>
-							<td>Cell 19</td>
-							<td>Cell 20</td>
-						</tr>
-						<tr>
-							<td>Cell 21</td>
-							<td>Cell 22</td>
-							<td>Cell 23</td>
-							<td>Cell 24</td>
-							<td>Cell 25</td>
-							<td>Cell 26</td>
-							<td>Cell 27</td>
-							<td>Cell 28</td>
-							<td>Cell 29</td>
-							<td>Cell 30</td>
-						</tr>
-					</tbody>
-				</table>
+						<thead>
+							<tr>
+								<th>Heading 1</th>
+								<th>Heading 2</th>
+								<th>Heading 3</th>
+								<th>Heading 4</th>
+								<th>Heading 5</th>
+								<th>Heading 6</th>
+								<th>Heading 7</th>
+								<th>Heading 8</th>
+								<th>Heading 9</th>
+								<th>Heading 10</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Cell 1</td>
+								<td>Cell 2</td>
+								<td>Cell 3</td>
+								<td>Cell 4</td>
+								<td>Cell 5</td>
+								<td>Cell 6</td>
+								<td>Cell 7</td>
+								<td>Cell 8</td>
+								<td>Cell 9</td>
+								<td>Cell 10</td>
+							</tr>
+							<tr>
+								<td>Cell 11</td>
+								<td>Cell 12</td>
+								<td>Cell 13</td>
+								<td>Cell 14</td>
+								<td>Cell 15</td>
+								<td>Cell 16</td>
+								<td>Cell 17</td>
+								<td>Cell 18</td>
+								<td>Cell 19</td>
+								<td>Cell 20</td>
+							</tr>
+							<tr>
+								<td>Cell 21</td>
+								<td>Cell 22</td>
+								<td>Cell 23</td>
+								<td>Cell 24</td>
+								<td>Cell 25</td>
+								<td>Cell 26</td>
+								<td>Cell 27</td>
+								<td>Cell 28</td>
+								<td>Cell 29</td>
+								<td>Cell 30</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</section>
 			<section id="buttons">
@@ -303,33 +324,54 @@ p q r s t u v w x y z { | } ~
 					Form elements</h2>
 				<form>
 					<fieldset>
-					    <div class="chk_name">
+					    <div class="form-name">
 					    	<label>Name</label>
 					    	<input type="text" value="" class="wide" required placeholder="First and last name">
 					    </div>
-					    <div class="chk_email">
+					    <div class="form-email">
 					    	<label>Enter your email</label>
-					    	<input type="email" class="wide" required value="">
+					    	<input type="email" class="wide" placeholder="&#8226;&#8226;&#8226;" required value="">
 					    </div>
-					    <div class="chk_phone">
-					    	<label>Enter your phone</label>
+					    <div class="form-phone">
+					    	<label>Enter your phone <span class="optional">(optional)</span></label>
 					    	<input type="number" required value="" placeholder="EG. +32 479 17 17 17">
 					    </div>
-					    <div class="chk_description">
+					    <div class="form-description">
 					    	<label>Enter a description</label>
-					    	<textarea placeholder="•••"></textarea>
+					    	<textarea placeholder="&#8226;&#8226;&#8226;" class="wide"></textarea>
+					    </div>
+					    <div class="form-buttons">
+					    	<input type="button" value="Cancel" class="button grey">
+					    	<input type="submit" value="Send" class="button">
 					    </div>
 					</fieldset>
 				</form>
-				<div class="checkbox">
-				  <input type="checkbox" id="chk" checked>
-				  <label for="chk" class="chk">Checkbox</label>
+				<h3>Checkboxes</h3>
+				<div class="chks md">
+					<div class="checkbox">
+						<input type="checkbox" id="chk">
+						<label for="chk" class="chk">Checkbox</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="chk2" checked disabled>
+						<label for="chk2">Checkbox</label>
+					</div>
 				</div>
-				<div class="checkbox">
-				  <input type="checkbox" id="chk2" checked disabled>
-				  <label for="chk2">Checkbox</label>
+				<h3>Radio buttons</h3>
+				<div class="rdbs md">
+					<div class="radio">
+						<input type="radio" name="rdbs" id="rdb1">
+						<label for="rdb1">Radiobutton</label>
+					</div>
+					<div class="radio">
+						<input type="radio" name="rdbs" id="rdb2" checked disabled>
+						<label for="rdb2">Radiobutton</label>
+					</div>
 				</div>
-
+				<h3>Progress bars</h3>
+				<div class="progress">
+					<span class="progress-bar" style="width: 30%;"></span>
+				</div>
 			</section>
 		</div>
 	</div>

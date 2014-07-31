@@ -17,7 +17,7 @@ fieldset label {
 	margin: 0 0 3px;
 }
 
-.wide { width: 100%!important; }
+textarea.wide { resize: vertical; }
 
 
 textarea, input[type=password], input[type=text], input[type=email], input[type=number] {
@@ -50,35 +50,72 @@ textarea {
 }
 
 
-// CHECKBOX
+// CHECKBOX & RADIOBUTTONS
 
-.checkbox input[type=checkbox] { display: none; }
-.checkbox label { cursor: pointer; }
+.checkbox input[type=checkbox], .radio input[type=radio] { display: none; }
+.checkbox label, .radio label { cursor: pointer; }
 
-.checkbox label:before {
+.checkbox label:before, .radio label:before {
 	content: '';
 
 	vertical-align: sub;
 
-	opacity: .75;
-	background-color: $color__white;
-	box-shadow: 0 0 0 1px rgba(0,0,0,.25) inset;
+	border: 1px solid $color__lightgrey;
+	background: $color__white;
 
 	display: inline-block;
+	zoom: 1;
+    *display: inline;
 	width: 20px;
 	height: 20px;
 	margin-right: 10px;
 }
 
+.radio label:before { border-radius: 50%; }
+
 .checkbox input[type=checkbox]:checked + label:before {
+	opacity: .8;
 	background: url('../img/static/check.svg');
 	background-repeat: no-repeat;
-	background-position: 3px 2px;
+	background-position: 2px 2px;
 	background-size: contain;
 	background-size: 15px 15px;
 }
 
-
-.checkbox input[type=checkbox]:disabled + label, .checkbox input[type=checkbox]:disabled + label:before {
-	opacity: .4;
+.radio input[type=radio]:checked + label:before {
+	background: #555;
+	box-shadow: 0 0 0 5px #fff inset;
 }
+
+
+.checkbox input[type=checkbox]:disabled + label,
+.checkbox input[type=checkbox]:disabled + label:before,
+.radio input[type=radio]:disabled + label,
+.radio input[type=radio]:disabled + label:before {
+	opacity: .5;
+}
+
+.checkbox input[type=checkbox]:disabled + label:before,
+.radio input[type=radio]:disabled + label:before {
+	border: 1px solid $color__darkgrey;
+}
+
+
+// PROGRESS BAR
+
+.progress {
+	background: $color__lightgrey;
+
+	width: 100%;
+	height: 7px;
+	.progress-bar {
+		background: $color__accent;
+
+		float: left;
+		height: 100%;
+
+		transition: width 1s;
+	}
+}
+
+.optional, .required { color: rgba(0, 0, 0, 0.5); }

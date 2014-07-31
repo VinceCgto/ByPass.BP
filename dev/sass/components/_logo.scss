@@ -35,15 +35,15 @@
 	svg {
 		fill: $color__logo-fill;
 	}
-	.flame-anim {
-		background: $color__logo-bg;
+	// .flame-anim {
+	// 	background: $color__logo-bg;
 
-		position: absolute;
-		width: 100%;
-		height: 40px;
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	height: 40px;
 
-		animation: flame 20s infinite;
-	}
+	// 	animation: flame 20s infinite;
+	// }
 }
 
 .creator {
@@ -55,9 +55,9 @@
 	padding: 0 10px;
 }
 
-@keyframes flame {
-    2% { bottom: 0 ; left: 0; transform: rotate(0deg);  }
-    5% { bottom: 10px; left: -20px; transform: rotate(-90deg); }
-    10% { bottom: 50px; left: 0; transform: rotate(0deg); }
-    100% { bottom: 40px; left: 0; }
-}
+// @keyframes flame {
+//     2% { bottom: 0 ; left: 0; transform: rotate(0deg);  }
+//     5% { bottom: 10px; left: -20px; transform: rotate(-90deg); }
+//     10% { bottom: 50px; left: 0; transform: rotate(0deg); }
+//     100% { bottom: 40px; left: 0; }
+// }

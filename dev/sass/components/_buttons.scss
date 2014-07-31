@@ -35,6 +35,10 @@ button.big, .button.big, [type=button].big, [type=submit].big {
 	padding: 1em;
 }
 
+button:hover, .button:hover, [type=button]:hover, [type=submit]:hover {
+	background: $color__button-hover-bg;
+}
+
 button.grey, .button.grey, [type=button].grey, [type=submit].grey {
 	background: $color__button-grey-bg;
 }
@@ -43,6 +47,3 @@ button.grey:hover, .button.grey:hover, [type=button].grey:hover, [type=submit].g
 	background: $color__button-grey-hover-bg;
 }
 
-button:hover, .button:hover, [type=button]:hover, [type=submit]:hover {
-	background: $color__button-hover-bg;
-}

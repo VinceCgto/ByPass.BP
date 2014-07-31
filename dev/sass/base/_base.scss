@@ -37,14 +37,18 @@ object, iframe,
 dl, dt, ol, ul,
 p, blockquote, pre,
 h1, h2, h3, h4, h5, h6,
-address, figure, fieldset, form, table, hr, input, .md, .dmd, .tblpan {
+address, figure, fieldset, form, table, hr, input, .progress, .md, .dmd, .tblpan {
 	display: block;
 	margin: 0;
     margin-bottom: 24px;
     margin-bottom: 1.5rem;
 } // md = margin down
 
+input[type="checkbox"], input[type="radio"] { display: inline; }
+
 .dmd { margin-bottom: 48px; margin-bottom: 3rem; } // double margin down
+
+.f-right { float: right; }
 
 hr {border: 1px solid $color__hr;  background: $color__hr; height: 0px; }
 

@@ -4,8 +4,8 @@
 
 /////////////*/
 
-::-moz-selection {color: $color__highlight-text;  background: $color__highlight-bg; text-shadow: none; }
-::selection {color: $color__highlight-text;  background: $color__highlight-bg; text-shadow: none; }
+::-moz-selection { color: $color__highlight-text;  background: $color__highlight-bg; text-shadow: none; }
+::selection { color: $color__highlight-text;  background: $color__highlight-bg; text-shadow: none; }
 
 .cap { position: relative; }
 
@@ -51,6 +51,6 @@ pre.cap:after {
 	padding-right: 0;
 }
 
-.cap:hover:after {
-	opacity: 1;
-}
+.cap:hover:after { opacity: 1; }
+
+.wide { width: 100%!important; }

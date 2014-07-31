@@ -5,7 +5,7 @@
 ///////////////////////////////////*/
 
 pre { position: relative;  padding-left: 1em; }
-pre.cb { border: 1px solid $color__pre-border; border-bottom: 5px solid $color__pre-border; } // code border
+pre.cb { border: 1px solid $color__pre-border; border-bottom: 5px solid $color__pre-border; } // code block/border
 
 pre:before {
 	content: attr(data-syntax);
@@ -23,24 +23,33 @@ pre:before {
 	top: 0;
 	right: 0;
 	display: block;
-	padding: 2px 10px;transition: opacity .5s;
+	padding: 2px 10px;
+
+	transition: opacity .5s;
 }
 
 pre:hover:before { opacity: 1; }
 
+p code {
+	font-size: .8em;
 
-code {
+	color: $color__accent;
+	border: 1px solid #e1e1e8;
+
+	padding: 3px 4px;
+}
+
+
+pre code {
 	font-size: .85em;
 	white-space: pre-wrap;
 
 	overflow: auto;
-
 	.ct { color: $color__accent; } 						// code tag
-	.at, .fun { color: #07a; } 							// attribute tag
-	.val { color: #690; } 								// attribute tag
+	.at, .fun { color: #07a; } 							// attribute tag + function
+	.val { color: #690; } 								// value
 	.com { color: $color__code_comment-text; } 			// comment
-
-	ol {
+	ol {												// line numbers
 		display: inline-block;
 		margin: 0;
 		li { display: inline; margin: 0; }
