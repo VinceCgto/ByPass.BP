@@ -5,5 +5,4 @@ $(document).ready(function(){
 		$('.container-outer').removeClass('contentSlideIn');
 	},2000);
 
-
 });

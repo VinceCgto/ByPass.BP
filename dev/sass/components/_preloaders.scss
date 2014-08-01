@@ -1,0 +1,206 @@
+/*/////////////////
+
+ 	PRELOADERS
+
+////////////////*/
+
+.preloader {
+	position: relative;
+	width: 60px;
+	height: 80px;
+}
+
+.part {
+	background: $color__accent;
+
+	position: absolute;
+}
+
+.p1, .p3 {
+	width: 4px;
+	height: 80px;
+}
+
+.p2, .p4 {
+	width: 60px;
+	height: 4px;
+}
+
+.p1, .p2 {top: 0; left: 0; }
+.p3, .p4 { right: 0; bottom: 0;}
+
+.el1, .el2, .el3, .el4 {
+	left: 10px;
+	height: 4px;
+
+	animation: slideIn 2s linear infinite;
+}
+
+@keyframes slideIn {
+	0% {opacity: 0;}
+	10% {opacity: .86;}
+	40% {opacity: .2;}
+	60% {opacity: .9;}
+	75% {opacity: .4;}
+	90% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+.el1 {
+	top: 20px;
+	width: 40px;
+
+	animation-delay: .8s;
+}
+
+.el2 {
+	top: 30px;
+	width: 20px;
+
+	animation-delay: 1.6s;
+}
+
+.el3 {
+	top: 40px;
+	width: 30px;
+
+	animation-delay: 2.4s;
+}
+
+.el4 {
+	top: 50px;
+	width: 35px;
+
+	animation-delay: 3.2s;
+}
+
+.loading {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .4em;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+
+	color: $color__accent;
+
+	position: absolute;
+	bottom: -25px;
+	margin: 0;
+	left: 4px;
+}
+
+
+/*
+
+PRELOADER #2
+
+
+
+@keyframes flickerIn {
+	0%{opacity: 0}
+	10%{opacity: 0.86}
+	40%{opacity: 0.2}
+	60%{opacity: 0.9}
+	80%{opacity: 0.4}
+	100%{opacity: 1}
+};
+
+.preloader {
+	position: relative;
+	height: 50px;
+	width: 50px;
+}
+
+.part {
+	opacity: 0;
+	animation: flickerIn 1.5s linear infinite alternate;
+	animation-fill-mode: forwards;
+	background: $color__accent;
+	position: absolute;
+}
+
+.p1, .p3, .p5, .p7, .p9 {
+	height: 50px;
+	width: 4px;
+}
+.p2, .p4, .p6, .p8 {
+	width: 50px;
+	height: 4px;
+}
+
+
+.p1{
+	animation-delay: .8s;
+	left: 0;
+	top: 0;
+}
+
+.p2{
+	animation-delay: 1.6s;
+	left: 0;
+	top: 0;
+}
+
+.p3{
+	animation-delay: 2.4s;
+	right: 0;
+	top: 0;
+}
+
+.p4{
+	animation-delay: 3.2s;
+	right: 0;
+	bottom: 0;
+	width: 40px;
+}
+
+.p5{
+	animation-delay: 4s;
+	height: 40px;
+	bottom: 0;
+	left: 10px;
+}
+
+.p6{
+	animation-delay: 4.8s;
+	width: 30px;
+	left: 10px;
+	top: 10px;
+}
+
+.p7{
+	animation-delay: 5.6s;
+	height: 30px;
+	right: 10px;
+	top: 10px;
+}
+
+.p8{
+	animation-delay: 6.4s;
+	width: 20px;
+	bottom: 10px;
+	left: 20px;
+}
+
+.p9{
+	animation-delay: 7.2s;
+	height: 20px;
+	bottom: 10px;
+	left: 20px;
+}
+
+.p10{
+	animation-delay: 8s;
+}
+
+.p12{
+	animation-delay: 8.8s;
+}
+
+.p13{
+	animation-delay: 9.6s;
+}
+
+.p14{
+	animation-delay: 10.4s;
+} */

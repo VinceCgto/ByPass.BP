@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title></title>
+    <title>ByPass Styleguide</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/static/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <!--[if lt IE 9]>
@@ -43,6 +43,10 @@
 	    </g>
 	    <g id="form">
   			<path d="M0 0v7h7v-3.594l-1 1v1.594h-5v-5h3.594l1-1h-5.594zm7 0l-3 3-1-1-1 1 2 2 4-4-1-1z" />
+	    </g>
+	    <g id="preload">
+  			<path d="M2 0v1h1v.031c-1.697.241-3 1.707-3 3.469 0 1.929 1.571 3.5 3.5 3.5s3.5-1.571 3.5-3.5c0-.45-.086-.874-.219-1.25l-.938.344c.107.304.156.596.156.906 0 1.391-1.109 2.5-2.5 2.5s-2.5-1.109-2.5-2.5 1.109-2.5 2.5-2.5c.298 0 .585.051.875.156l.344-.938c-.221-.081-.471-.119-.719-.156v-.063h1v-1h-3zm5 1.125s-3.675 2.8-3.875 3c-.2.2-.2.519 0 .719.2.2.519.2.719 0 .2-.19 3.156-3.719 3.156-3.719z"
+		  />
 	    </g>
 	</svg>
 	<div class="logo"><span class="creator"><i>created by</i> <br><strong>Vince Caregnato</strong></span><div class="logo-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8 8"><path d="M1.5 0c-.828 0-1.5.672-1.5 1.5 0 .656.414 1.202 1 1.406v2.188c-.586.204-1 .75-1 1.406 0 .828.672 1.5 1.5 1.5s1.5-.672 1.5-1.5c0-.595-.341-1.101-.844-1.344.09-.09.205-.156.344-.156h2c.823 0 1.5-.677 1.5-1.5v-.594c.586-.204 1-.75 1-1.406 0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5c0 .656.414 1.202 1 1.406v.594c0 .277-.223.5-.5.5h-2c-.171 0-.346.04-.5.094v-1.188c.586-.204 1-.75 1-1.406 0-.828-.672-1.5-1.5-1.5z"
@@ -371,6 +375,45 @@ p q r s t u v w x y z { | } ~
 				<h3>Progress bars</h3>
 				<div class="progress">
 					<span class="progress-bar" style="width: 30%;"></span>
+				</div>
+				<div class="progress">
+					<span class="progress-bar animate" style="width: 1%;"></span>
+				</div>
+				<h3>Dropdown</h3>
+				<select>
+				    <option value="-1" selected>Choose an animal</option>
+				    <option value="1">Monkey</option>
+				    <option value="2" disabled>Bear</option>
+				    <option value="3">Squirrel</option>
+				    <option value="4">Elephant</option>
+				</select>
+			</section>
+			<section id="preloader">
+				<h2><span class="icon">
+						<svg viewBox="0 0 8 8"><g filter=""><use xlink:href="#preload"></use></g></svg>
+					</span>
+					Preloader</h2>
+				<!-- <div class="preloader">
+					<div class="p1 part"></div>
+					<div class="p2 part"></div>
+					<div class="p3 part"></div>
+					<div class="p4 part"></div>
+					<div class="p5 part"></div>
+					<div class="p6 part"></div>
+					<div class="p7 part"></div>
+					<div class="p8 part"></div>
+					<div class="p9 part"></div>
+				</div> -->
+				<div class="preloader">
+					<div class="p1 part"></div>
+					<div class="p2 part"></div>
+					<div class="p3 part"></div>
+					<div class="p4 part"></div>
+					<div class="el1 part"></div>
+					<div class="el2 part"></div>
+					<div class="el3 part"></div>
+					<div class="el4 part"></div>
+					<span class="loading">Loading...</span>
 				</div>
 			</section>
 		</div>

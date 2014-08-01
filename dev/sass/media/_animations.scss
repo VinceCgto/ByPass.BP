@@ -19,3 +19,16 @@
         transform: translateY(0);
     }
 }
+
+@keyframes progressAnimate {
+    0% { width: 1%; }
+    15% { width: 15%; }
+    35% { width: 50%; }
+    50% { width: 35%; }
+    65% { width: 75%; }
+    80% { width: 100%; }
+    100% { width: 1%; }
+
+}
+
+.progress-bar.animate {	animation: progressAnimate 8s infinite; }
