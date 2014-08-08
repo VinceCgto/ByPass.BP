@@ -7,12 +7,12 @@
 $color__lightgrey: #D3D3D3;
 $color__darkgrey: #AAA;
 $color__white: #FFF;
-$color__red: #b55856;
-$color__emerald: #009975; // green
-$color__tangerineTango: #e2492f; // orangered
-$color__turquoise: #44b8ab; // turquoise
-$color__mimosa: #eec050; // yellow
-$color__blueIris: #5b5da7; // purple
+$color__indian: #b55856;			// red
+$color__emerald: #009975; 			// green
+$color__tangerine: #e2492f; 		// orangered
+$color__turquoise: #44b8ab; 		// turquoise
+$color__mimosa: #eec050; 			// yellow
+$color__blueIris: #5b5da7; 			// purple
 
 
 /*    BASE     */
@@ -23,7 +23,7 @@ $color__base-text: 					#444;					// Grey
 
 /*    ACCENT     */
 
-$color__accent: 					$color__red; 			// Indianred
+$color__accent: 					$color__indian; 			// Indianred
 
 
 /*    HIGHLIGHT     */

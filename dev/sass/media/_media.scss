@@ -14,7 +14,7 @@
 		zoom: 1;
 		margin-bottom: 0;
 	}
-	.cap:after {
+	[data-caption]:after {
 		text-align: left;
 
 		opacity: 1;
@@ -31,7 +31,7 @@
 		margin-bottom: 1em;
 	}
 
-	.big.cap:after {
+	.big[data-caption]:after {
 		text-align: center;
 	}
 
@@ -41,7 +41,7 @@
 @media print { img { max-width: 100% !important; } }
 
 @media all and (max-width: 1500px) {
-	.container-outer > section > .cap:after {
+	.container-outer > section > [data-caption]:after {
 		text-align: left;
 
 		opacity: 1;
@@ -57,7 +57,7 @@
 		padding-right: 0;
 	}
 
-	.container-outer > section > blockquote.big.cap:after {
+	.container-outer > section > blockquote.big[data-caption]:after {
 		text-align: center;
 	}
 }
@@ -71,7 +71,7 @@
 }
 
 @media all and (max-width: $desktop-outer - 50) {
-	.cap:after {
+	[data-caption]:after {
 		text-align: left;
 
 		opacity: 1;

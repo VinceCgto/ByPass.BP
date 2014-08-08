@@ -75,7 +75,7 @@ grunt.initConfig({
 	},
 	open : {
 	    dev : {
-	    	path: 'http://localhost:9090'
+	    	path: 'http://localhost:7070'
 	    },
 	    dist : {
 			path: ''

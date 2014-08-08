@@ -4,5 +4,4 @@ $(document).ready(function(){
 	setTimeout(function(){
 		$('.container-outer').removeClass('contentSlideIn');
 	},2000);
-
 });

@@ -13,6 +13,7 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
     <![endif]-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/libs/rem.min.js"></script>
     <script>!window.jQuery && document.write('<script src="js/libs/jquery.min.js"><\/script>')</script>
 </head>
 <body>
@@ -74,14 +75,21 @@
 						<svg viewBox="0 0 8 8"><g filter=""><use xlink:href="#text"></use></g></svg>
 					</span>
 					Paragraphs &amp; links</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, officiis, aliquid, eligendi, molestias recusandae <a href="http://google.be" class="link">dolore</a> repellat saepe excepturi quidem eos quo veritatis? Fuga iste aut sapiente totam facere amet! <strong>Voluptatum?</strong></p>
+				<h3>Paragraphs</h3>
+				<h4>Callout</h4>
+				<p class="callout">This is a <code>p.callout</code>. It is used to explain all the elements and additional attributes.</p>
+				<h4>Phrasing styles</h4>
+				<p>Use <code>&lt;em&gt;</code> for <em>stress</em> emphasis and <code>&lt;strong&gt;</code> for <strong>strong importance</strong>. <code>&lt;i&gt;</code> is now used as an alternate voice and <code>&lt;b&gt;</code> is used for text that is stylistically offset, like drop caps. <code>&lt;sub&gt;</code> is for subscript text, like O<sub>2</sub> while <code>&lt;sup&gt;</code> is for superscript text, like this<sup>[1]</sup>.</p>
+				<h3>Links</h3>
+				<p class="callout">Wrapped in a <code>div.link-wrap</code>, the hyperlink has a class <code>.link</code>. Email addresses have an additional class <code>.email</code>.</p>
 				<div class="link-wrap">
-					<a href="http://google.be" class="link">A hyperlink (Google)</a>
+					<a href="http://google.be" class="link">Hyperlink (Google)</a>
 				</div>
-				<div class="link-wrap cap" data-caption="This is an email address">
+				<div class="link-wrap" data-caption="This is an email address">
 					<a href="mailto:vcaregnato@gmail.com" class="link email">vcaregnato@gmail.com</a>
 				</div>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odio magnam maxime maiores cumque eaque eum earum iste illum quisquam! Ullam, ipsa, unde iste aperiam maiores numquam <em>fugiat ea libero</em>.</p>
+				<h4>Inline</h4>
+				<p>Inline links have a class <code>.link</code>. Impedit voluptatum sed <a href="http://google.be" class="link">suscipit libero</a> dolorum odit praesentium?</p>
 			</section>
 			<section id="preCode">
 				<h2>
@@ -90,6 +98,7 @@
 					</span>
 					Formatted text &amp; code blocks</h2>
 <!-- DON'T INDENT PRE, IT COULD MESS WITH THE FORMATTING -->
+<p class="callout">Preformated text can be added with the <code>&lt;>pre&gt;</code> tag</p>
 <pre>
 <samp>
 ! " # $ % &amp; ' ( ) * + , - . /
@@ -100,20 +109,21 @@ P Q R S T U V W X Y Z [ \ ] ^ _
 p q r s t u v w x y z { | } ~
 </samp>
 </pre>
-
+<p class="callout">Code blocks (cb) are styled like below. The class <code>.cb</code> is added to the <code>&lt;pre&gt;</code> tag. A syntax can be displayed in the top right corner of the code block on hover. These can be added by declaring a <code>data-syntax</code>. Additionally a caption can be added, it will be displayed below the code. This caption can be set by declaring a <code>data-caption</code>.</p>
 <!-- HTML CODE -->
-<pre class="cb cap" data-syntax="HTML" data-caption="This is an HTML code block">
+<pre class="cb" data-syntax="HTML" data-caption="This is an HTML code block">
 <code>
-<span class="com">&lt;!-- Test comment --&gt;</span>
-<span class="ct">&lt;div <span class="at">class</span>=<span class="val">"test"</span>&gt;</span>
-    <span class="ct">&lt;p&gt;</span>Testing, 1, 2, 3!<span class="ct">&lt;/p&gt;</span>
-    <span class="ct">&lt;code&gt;</span>Coding...<span class="ct">&lt;/code&gt;</span>
-<span class="ct">&lt;div&gt;</span>
+<span class="com">&lt;!-- This is a comment --&gt;</span>
+<span class="ct">&lt;pre <span class="attr">class</span>=<span class="val">"cb"</span> <span class="attr">data-syntax</span>=<span class="val">"HTML"</span> <span class="attr">data-caption</span>=<span class="val">"This is an HTML code block"</span>&gt;</span>
+    <span class="ct">&lt;code&gt;</span>
+	<span>...</span>
+    <span class="ct">&lt;/code&gt;</span>
+<span class="ct">&lt;/pre&gt;</span>
 </code>
 </pre>
 
 <!-- JS CODE -->
-<pre class="cb"  data-syntax="JS">
+<!-- <pre class="cb"  data-syntax="JS">
 <code>
 <span class="com">/* A function */</span>
 <span class="fun">function</span> <strong>Panel</strong>(element, canClose, closeHandler) {
@@ -124,8 +134,9 @@ p q r s t u v w x y z { | } ~
     	                    };
 }
 </code>
-</pre>
+</pre> -->
 
+<p class="callout">Line numbers can be added by adding an <code>&lt;ol&gt;</code> tag and a <code>&lt;li&gt;</code> tags for every line.</p>
 <!-- PHP CODE -->
 <pre class="cb" data-syntax="PHP">
 <code>
@@ -135,16 +146,16 @@ p q r s t u v w x y z { | } ~
 <li>?&gt;</li>
 </ol>
 </code>
-			</pre>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, totam facilis <code>.container</code>, provident impedit sunt molestiae <code>font-size</code> rerum. Adipisci et sapiente, tenetur sit, est natus totam. Quidem repellat fuga neque.</p>
+	</pre>
+
 			</section>
 			<section id="images">
 				<h2><span class="icon">
-							<svg viewBox="0 0 8 8"><g filter=""><use xlink:href="#image"></use></g></svg>
+						<svg viewBox="0 0 8 8"><g filter=""><use xlink:href="#image"></use></g></svg>
 					</span>
 					Images</h2>
 				<div class="inline-fig">
-					<figure class="cap" data-caption="This is a figure">
+					<figure data-caption="This is a figure">
 					    <img src="img/200x200.gif" alt="200x200">
 					    <figcaption>A 200 by 200 image with a super large figcaption</figcaption>
 					</figure>
@@ -171,7 +182,7 @@ p q r s t u v w x y z { | } ~
 					<li>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.
 					</li>
-					<li class="cap" data-caption="This is a list item for an undordered list">
+					<li data-caption="This is a list item for an undordered list">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, dolorem, repellat ipsa voluptatum magnam culpa in laboriosam dolorum cupiditate maiores doloremque quam blanditiis optio minus voluptatem iste fugiat quas fugit.
 					</li>
 					<li>
@@ -204,7 +215,7 @@ p q r s t u v w x y z { | } ~
 				<p>People ignore design that ignores people!</p>
 				<span class="cite">Frank Chimero</span>
 			</blockquote>
-			<blockquote class="big cap" data-caption="This is a big blockquote">
+			<blockquote class="big" data-caption="This is a big blockquote">
 				<p class="quotes">A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools</p>
 				<span class="cite">Douglas Adams</span>
 			</blockquote>
@@ -388,31 +399,37 @@ p q r s t u v w x y z { | } ~
 				    <option value="4">Elephant</option>
 				</select>
 			</section>
-			<section id="preloader">
+			<section id="preloaders">
 				<h2><span class="icon">
 						<svg viewBox="0 0 8 8"><g filter=""><use xlink:href="#preload"></use></g></svg>
 					</span>
-					Preloader</h2>
-				<!-- <div class="preloader">
-					<div class="p1 part"></div>
-					<div class="p2 part"></div>
-					<div class="p3 part"></div>
-					<div class="p4 part"></div>
-					<div class="p5 part"></div>
-					<div class="p6 part"></div>
-					<div class="p7 part"></div>
-					<div class="p8 part"></div>
-					<div class="p9 part"></div>
-				</div> -->
-				<div class="preloader">
-					<div class="p1 part"></div>
-					<div class="p2 part"></div>
-					<div class="p3 part"></div>
-					<div class="p4 part"></div>
+					Preloaders</h2>
+				<p class="callout"><code>.pre-lo-lines</code></p>
+				<div class="preloader pre-lo-lines md">
 					<div class="el1 part"></div>
 					<div class="el2 part"></div>
 					<div class="el3 part"></div>
 					<div class="el4 part"></div>
+				</div>
+				<p class="callout"><code>.pre-lo-blocks</code></p>
+				<div class="preloader pre-lo-blocks md">
+					<div class="b1 part"></div>
+					<div class="b2 part"></div>
+					<div class="b3 part"></div>
+					<div class="b4 part"></div>
+				</div>
+				<p class="callout">For a page or a document <code>.pre-lo-page</code></p>
+				<div class="preloader pre-lo-page">
+					<div class="p1 part"></div>
+					<div class="p2 part"></div>
+					<div class="p3 part"></div>
+					<div class="p4 part"></div>
+					<div class="prel-lines">
+						<div class="el1 part"></div>
+						<div class="el2 part"></div>
+						<div class="el3 part"></div>
+						<div class="el4 part"></div>
+					</div>
 					<span class="loading">Loading...</span>
 				</div>
 			</section>

@@ -44,6 +44,8 @@ address, figure, fieldset, form, table, hr, input, .progress, .md, .dmd, .tblpan
     margin-bottom: 1.5rem;
 } // md = margin down
 
+h4, h5, h6 { margin-bottom: 16px; margin-bottom: 1em; }
+
 input[type="checkbox"], input[type="radio"] { display: inline; }
 
 .dmd { margin-bottom: 48px; margin-bottom: 3rem; } // double margin down

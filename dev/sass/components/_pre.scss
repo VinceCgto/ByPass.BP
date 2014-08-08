@@ -46,7 +46,7 @@ pre code {
 
 	overflow: auto;
 	.ct { color: $color__accent; } 						// code tag
-	.at, .fun { color: #07a; } 							// attribute tag + function
+	.attr, .fun { color: #07a; } 						// attribute tag + function
 	.val { color: #690; } 								// value
 	.com { color: $color__code_comment-text; } 			// comment
 	ol {												// line numbers

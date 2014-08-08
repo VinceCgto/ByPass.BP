@@ -7,14 +7,17 @@
 ::-moz-selection { color: $color__highlight-text;  background: $color__highlight-bg; text-shadow: none; }
 ::selection { color: $color__highlight-text;  background: $color__highlight-bg; text-shadow: none; }
 
-.cap { position: relative; }
+[data-caption] { position: relative; }
 
-.cap:after {
+[data-caption]:after {
 	content: attr(data-caption);
+	display: inline;
 
 	font-size: .6rem;
 	font-style: italic;
+	font-weight: 100;
 	line-height: 1rem;
+	// *line-height: 18px;
 	text-align: right;
 	vertical-align: middle;
 	text-transform: none;
@@ -33,7 +36,7 @@
 	transition: opacity .5s;
 }
 
-pre.cap:after {
+pre[data-caption]:after {
 	text-align: left;
 
 	opacity: 1;
@@ -51,6 +54,17 @@ pre.cap:after {
 	padding-right: 0;
 }
 
-.cap:hover:after { opacity: 1; }
+[data-caption]:hover:after { opacity: 1; }
 
 .wide { width: 100%!important; }
+
+@media screen and (min-width:0\0) {
+	[data-caption]:after {
+		line-height: inherit!important; // IE hack for pseudo element line-height bug
+	}
+ }
+
+.callout {
+	border-left: 0.4em solid $color__accent;
+	padding-left: 1em;
+}
