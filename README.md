@@ -7,6 +7,10 @@ This boilerplate is my starting point for projects.
 
 It contains HTML5, CSS3 & jQuery snippets, is constructed to be set up with Grunt and helps me (read: you) set up a new project in no-time. *'Bypassing'* the tedious tasks is what it's for!
 
+## Demo
+
+[Styleguide](http://caregnato.be/dev/bypass/)
+
 
 ## Requirements
 
