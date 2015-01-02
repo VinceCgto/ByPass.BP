@@ -23,7 +23,7 @@ blockquote {
 
 		margin-left: em(5);
 	}
-	span.cite {
+	cite {
 		font-style: normal;
 		line-height: 24px;
 		line-height: 1.5rem;
@@ -32,14 +32,14 @@ blockquote {
 		margin: em(10) auto;
 		padding-left: em(10);
 	}
-	span.cite:before { content: '\2014'; margin-right: em(5); }   // Places a '-' before the author's name
+	cite:before { content: '\2014'; margin-right: em(5); }   // Places a '-' before the author's name
 }
 
 // BIG (MOSTLY SHORT ONE LINER) QUOTES
 blockquote.big {
 	font-size: 1.5em;
 	text-align: center;
-	span.cite {
+	cite {
 		font-size: .8rem;
 
 		width: 50%;

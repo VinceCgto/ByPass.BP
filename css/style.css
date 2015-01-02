@@ -1,14 +1,3 @@
-/*//////////
-
- 	BASE
-
-//////////*/
-/*////////////////////////////////////////////////////
-
-	FETCH LATEST NORMALIZE
-	Sublime Text 2 > Fetch: File > Normalize.css
-
-////////////////////////////////////////////////////*/
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -178,8 +167,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -286,8 +273,6 @@ input {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -310,8 +295,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -368,16 +351,6 @@ td,
 th {
   padding: 0; }
 
-/*/////////////////////
-
- 	VARIABLES, DUH
-
-/////////////////////*/
-/*/////////////
-
- 	COLORS
-
-/////////////*/
 /*    BASE     */
 /*    ACCENT     */
 /*    HIGHLIGHT     */
@@ -388,16 +361,6 @@ th {
 /*    BUTTONS     */
 /*    FORMS     */
 /*    LOGO     */
-/*/////////////
-
- 	MIXINS
-
-/////////////*/
-/*/////////////
-
- 	HELPERS
-
-/////////////*/
 ::-moz-selection {
   color: white;
   background: #b55856;
@@ -458,17 +421,16 @@ pre[data-caption]:after {
   [data-caption]:after {
     line-height: inherit !important; } }
 .callout {
-  border-left: 0.4em solid #b55856;
-  padding-left: 1em; }
+  border: 1px solid lightgrey;
+  box-shadow: -0.4em 0 #b55856;
+  margin-left: 0.4em;
+  padding: 1em; }
 
-/*//////////////////////////////////////////
+.highlight {
+  background: #b55856;
+  color: white; }
 
-	ALL ELEMENTS HIGH UP THE FOOD CHAIN
-
-//////////////////////////////////////////*/
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 html {
@@ -485,8 +447,7 @@ body {
   background: white;
   letter-spacing: 0.00625em;
   text-rendering: optimizeLegibility;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-backface-visibility: hidden; }
+  -webkit-tap-highlight-color: transparent; }
 
 textarea {
   resize: vertical; }
@@ -521,8 +482,7 @@ hr {
   height: 0px; }
 
 img {
-  display: block;
-  width: 100%;
+  display: inline-block;
   max-width: 100%; }
 
 section {
@@ -551,11 +511,21 @@ section {
   width: 700px;
   margin: 0 auto; }
 
-/*//////////////////
+blockquote {
+  font-style: italic;
+  line-height: 1.5em; }
+  blockquote cite {
+    font-style: normal;
+    line-height: 24px;
+    line-height: 1.5rem;
+    display: block;
+    margin-left: 0.625em; }
 
- 	TYPOGRAPHY
+th, td {
+  text-align: left;
+  min-width: 100px;
+  padding: 15px; }
 
-//////////////////*/
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.5em; }
 
@@ -608,16 +578,6 @@ a.link:after {
 .email {
   font-style: italic; }
 
-/*////////////////
-
- 	COMPONENTS
-
-////////////////*/
-/*////////////////////////
-
- 	IMAGES & FIGURES
-
-////////////////////////*/
 img {
   -webkit-transition: .3s;
   transition: .3s;
@@ -638,11 +598,6 @@ figcaption {
   display: table-caption;
   margin-top: 3px; }
 
-/*//////////
-
- 	SVG
-
-//////////*/
 #svg-source {
   display: none; }
 
@@ -655,11 +610,6 @@ figcaption {
   vertical-align: top;
   fill: #b55856; }
 
-/*///////////////////
-
- 	BLOCKQUOTES
-
-///////////////////*/
 blockquote {
   font-style: italic;
   line-height: 1.5em;
@@ -677,21 +627,21 @@ blockquote {
   blockquote .quotes:after {
     content: close-quote;
     margin-left: 0.3125em; }
-  blockquote span.cite {
+  blockquote cite {
     font-style: normal;
     line-height: 24px;
     line-height: 1.5rem;
     display: block;
     margin: 0.625em auto;
     padding-left: 0.625em; }
-  blockquote span.cite:before {
+  blockquote cite:before {
     content: '\2014';
     margin-right: 0.3125em; }
 
 blockquote.big {
   font-size: 1.5em;
   text-align: center; }
-  blockquote.big span.cite {
+  blockquote.big cite {
     font-size: .8rem;
     width: 50%; }
 
@@ -700,11 +650,6 @@ blockquote.small {
   text-align: left;
   width: 80%; }
 
-/*/////////////
-
- 	BUTTONS
-
-/////////////*/
 button, .button, [type=button], [type=submit] {
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
@@ -721,8 +666,6 @@ button, .button, [type=button], [type=submit] {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   position: relative;
   display: inline-block;
-  -webkit-box-sizing: initial;
-  -moz-box-sizing: initial;
   box-sizing: initial;
   margin: 0 0 10px;
   padding: .7em;
@@ -741,11 +684,6 @@ button.grey, .button.grey, [type=button].grey, [type=submit].grey {
 button.grey:hover, .button.grey:hover, [type=button].grey:hover, [type=submit].grey:hover {
   background: #cecece; }
 
-/*////////////
-
- 	LISTS
-
-////////////*/
 ul > li:not(:last-child), ol > li:not(:last-child) {
   margin-bottom: 1em; }
 
@@ -768,18 +706,13 @@ ol li:before {
   padding-right: .5em;
   -webkit-touch-callout: none; }
 
-/*////////////////////////////////////
-
- 	PREFORMATED TEXT & CODE BLOCKS
-
-///////////////////////////////////*/
 pre {
   position: relative;
   padding-left: 1em; }
 
 pre.cb {
-  border: 1px solid lightgray;
-  border-bottom: 5px solid lightgray; }
+  border: 1px solid lightgrey;
+  border-bottom: 5px solid lightgrey; }
 
 pre:before {
   content: attr(data-syntax);
@@ -789,7 +722,7 @@ pre:before {
   letter-spacing: 0.0625em;
   opacity: 0;
   color: white;
-  background: lightgray;
+  background: lightgrey;
   position: absolute;
   top: 0;
   right: 0;
@@ -826,11 +759,6 @@ pre code {
       display: inline;
       margin: 0; }
 
-/*//////////////
-
- 	TABLES
-
-/////////////*/
 table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -861,11 +789,6 @@ table {
   left: 0;
   width: 100%; }
 
-/*/////////////
-
- 	LOGO
-
-/////////////*/
 .logo {
   position: fixed;
   top: 0;
@@ -888,7 +811,7 @@ table {
 .logo-icon {
   cursor: pointer;
   text-align: center;
-  background: lightgray;
+  background: lightgrey;
   position: relative;
   overflow: hidden;
   width: 50px;
@@ -906,11 +829,6 @@ table {
   .creator strong {
     color: #b55856; }
 
-/*/////////////
-
- 	FORMS
-
-/////////////*/
 textarea, input, select, button {
   outline: 0px; }
 
@@ -952,12 +870,14 @@ textarea {
   display: none; }
 
 .checkbox label, .radio label {
-  cursor: pointer; }
+  cursor: pointer;
+  padding-left: 1px;
+  margin-left: -1px; }
 
 .checkbox label:before, .radio label:before {
   content: '';
   vertical-align: sub;
-  border: 1px solid lightgray;
+  border: 1px solid lightgrey;
   background: white;
   display: inline-block;
   zoom: 1;
@@ -974,14 +894,11 @@ textarea {
   background: url("../img/static/check.svg");
   background-repeat: no-repeat;
   background-position: 2px 2px;
-  -webkit-background-size: contain contain;
   background-size: contain;
-  -webkit-background-size: 15px 15px;
   background-size: 15px 15px; }
 
 .radio input[type=radio]:checked + label:before {
   background: #555;
-  -webkit-box-shadow: 0 0 0 5px #fff inset;
   box-shadow: 0 0 0 5px #fff inset; }
 
 .checkbox input[type=checkbox]:disabled + label,
@@ -995,7 +912,7 @@ textarea {
   border: 1px solid #aaaaaa; }
 
 .progress {
-  background: lightgray;
+  background: lightgrey;
   width: 100%;
   height: 7px; }
   .progress .progress-bar {
@@ -1012,11 +929,6 @@ select {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 5px; }
 
-/*/////////////////
-
- 	PRELOADERS
-
-////////////////*/
 .preloader {
   position: relative;
   display: block; }
@@ -1174,36 +1086,7 @@ select {
 
   100% {
     opacity: 0; } }
-/*////////////
 
- 	LAYOUT
-
-////////////*/
-/*/////////////
-
- 	HEADER
-
-/////////////*/
-/*/////////////////
-
- 	NAVIGATION
-
-/////////////////*/
-/*/////////////
-
- 	FOOTER
-
-/////////////*/
-/*////////////
-
- 	MEDIA
-
-////////////*/
-/*////////////////////////
-
- 	CSS 3 ANIMATIONS
-
-////////////////////////*/
 .contentSlideIn {
   -webkit-transform: translateZ(0);
   transform: translateZ(0); }
@@ -1229,6 +1112,7 @@ select {
     opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0); } }
+
 @-webkit-keyframes progressAnimate {
   0% {
     width: 1%; }
@@ -1250,6 +1134,7 @@ select {
 
   100% {
     width: 1%; } }
+
 @keyframes progressAnimate {
   0% {
     width: 1%; }
@@ -1271,15 +1156,11 @@ select {
 
   100% {
     width: 1%; } }
+
 .progress-bar.animate {
   -webkit-animation: progressAnimate 8s infinite;
   animation: progressAnimate 8s infinite; }
 
-/*///////////////////////////
-
- 	MEDIA QUERIES & PRINT
-
-///////////////////////////*/
 .crappie .checkbox label:before, .crappie .radio label:before {
   display: none; }
 .crappie .checkbox input[type=checkbox], .crappie .radio input[type=radio] {
@@ -1290,7 +1171,7 @@ select {
   text-align: left;
   opacity: 1;
   border: 0;
-  border-top: 1px solid lightgray;
+  border-top: 1px solid lightgrey;
   position: relative;
   right: auto;
   display: block;
@@ -1312,7 +1193,7 @@ select {
     text-align: left;
     opacity: 1;
     border: 0;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid lightgrey;
     position: relative;
     right: auto;
     display: block;
@@ -1334,7 +1215,7 @@ select {
     text-align: left;
     opacity: 1;
     border: 0;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid lightgrey;
     position: relative;
     right: auto;
     display: block;
@@ -1380,8 +1261,3 @@ select {
 
   textarea, input[type=password], input[type=text], input[type=email], input[type=number] {
     width: 100%; } }
-/*/////////////
-
- 	RETINA
-
-/////////////*/

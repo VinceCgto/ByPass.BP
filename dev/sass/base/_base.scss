@@ -28,7 +28,7 @@ body {
 	text-rendering: optimizeLegibility;
 	// -webkit-font-smoothing: antialiased;  --- anti-aliasing if light text on dark BG
   	-webkit-tap-highlight-color: transparent;
-	-webkit-backface-visibility: hidden;
+	// -webkit-backface-visibility: hidden;
 }
 
 textarea { resize: vertical; }
@@ -54,7 +54,7 @@ input[type="checkbox"], input[type="radio"] { display: inline; }
 
 hr {border: 1px solid $color__hr;  background: $color__hr; height: 0px; }
 
-img { display: block; width: 100%; max-width: 100%; }
+img { display: inline-block; max-width: 100%; }
 
 section { margin-bottom: 32px; margin-bottom: 2rem; }
 
@@ -78,3 +78,19 @@ section { margin-bottom: 32px; margin-bottom: 2rem; }
 	width: $desktop-inner;
 	margin: 0 auto;
 }
+
+blockquote {
+	font-style: italic;
+	line-height: 1.5em;
+
+	cite {
+		font-style: normal;
+		line-height: 24px;
+		line-height: 1.5rem;
+
+		display: block;
+		margin-left: em(10);
+	}
+}
+
+th, td {text-align: left; min-width: 100px;  padding: 15px; }

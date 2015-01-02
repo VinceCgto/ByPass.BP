@@ -65,6 +65,10 @@ pre[data-caption]:after {
  }
 
 .callout {
-	border-left: 0.4em solid $color__accent;
-	padding-left: 1em;
+	border: 1px solid $color__lightgrey;
+	box-shadow: -0.4em 0 $color__accent;
+	margin-left: 0.4em;
+	padding: 1em;
 }
+
+.highlight { background: $color__accent; color: $color__accent-text; }

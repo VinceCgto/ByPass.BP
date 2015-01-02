@@ -46,6 +46,14 @@ grunt.initConfig({
 			dest: '<%= pkg.directories.js %>'
 		}
 	},
+	concat: {
+	    dist: {
+	    	src: ['<%= pkg.directories.js_dev %>/libs/*.js',
+	    			'!<%= pkg.directories.js_dev %>/libs/jquery.min.js',
+	    			'<%= pkg.directories.js_dev %>/script.js',],
+	    	dest: '<%= pkg.directories.js %>/script.js',
+	    },
+	},
 	uglify: {
 		options: {
 			mangle: false
@@ -74,9 +82,6 @@ grunt.initConfig({
 		}
 	},
 	open : {
-	    dev : {
-	    	path: 'http://localhost:7070'
-	    },
 	    dist : {
 			path: ''
 	    }
@@ -88,11 +93,12 @@ grunt.loadNpmTasks ('grunt-autoprefixer');
 grunt.loadNpmTasks ('grunt-contrib-sass');
 grunt.loadNpmTasks ('grunt-contrib-watch');
 grunt.loadNpmTasks ('grunt-contrib-copy');
-grunt.loadNpmTasks('grunt-contrib-imagemin');
-grunt.loadNpmTasks('grunt-open');
+grunt.loadNpmTasks ('grunt-contrib-concat');
+grunt.loadNpmTasks ('grunt-contrib-imagemin');
+grunt.loadNpmTasks ('grunt-open');
 
 // Default task(s).
-grunt.registerTask('default', ['sass:dev', 'autoprefixer:dev', 'copy', 'imagemin', 'open:dev', 'watch']);
-grunt.registerTask('dist', ['sass:dist', 'autoprefixer:dev', 'copy', 'imagemin', 'uglify', 'open:dist']);
+grunt.registerTask('default', ['sass:dev', 'autoprefixer:dev', 'concat:dist', 'imagemin', 'watch']);
+grunt.registerTask('dist', ['sass:dist', 'autoprefixer:dev', 'concat:dist', 'uglify', 'imagemin' , 'open:dist']);
 
 };
