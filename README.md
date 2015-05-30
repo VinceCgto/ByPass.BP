@@ -14,12 +14,13 @@ It contains HTML5, CSS3 & jQuery snippets, is constructed to be set up with Grun
 
 ## Requirements
 
-[NodeJS](http://nodejs.org/) and [Grunt](http://gruntjs.com/).
+[NodeJS](http://nodejs.org/), [Sass](http://sass-lang.com) and [Grunt](http://gruntjs.com/).
 
 
 ## Installation
 
-Step 1. [Download](http://nodejs.org/download/) and install NodeJS
+Step 1a. [Download](http://nodejs.org/download/) and install NodeJS
+Step 1b. [Download](http://sass-lang.com/install) and install Sass
 
 Step 2. Install Grunt CLI
 ```shell
