@@ -20,6 +20,7 @@ It contains HTML5, CSS3 & jQuery snippets, is constructed to be set up with Grun
 ## Installation
 
 Step 1a. [Download](http://nodejs.org/download/) and install NodeJS
+
 Step 1b. [Download](http://sass-lang.com/install) and install Sass
 
 Step 2. Install Grunt CLI
